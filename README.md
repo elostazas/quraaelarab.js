@@ -1,1 +1,0 @@
-# quraaelarab.js
