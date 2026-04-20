@@ -16,510 +16,1066 @@
         { id: "128_banna", name: "محمود علي البنا", radio_url: "https://qurango.net/radio/mahmoud_ali__albanna", category: "قراء" },
         { id: "128_banna_mojawwad", name: "محمود علي البنا مجود", radio_url: "https://qurango.net/radio/mahmoud_ali__albanna_mojawwad", category: "قراء" },
         { id: "127_ismail", name: "مصطفي إسماعيل", radio_url: "https://qurango.net/radio/mustafa_ismail", category: "قراء" },
+{
+  "radios": [
+    {
+      "id": 1,
+      "name": "إذاعة إبراهيم الأخضر",
+      "url": "https://backup.qurango.net/radio/ibrahim_alakdar",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 2,
+      "name": "إذاعة شيخ أبو بكر الشاطري",
+      "url": "https://backup.qurango.net/radio/shaik_abu_bakr_al_shatri",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 3,
+      "name": "إذاعة أحمد العجمي",
+      "url": "https://backup.qurango.net/radio/ahmad_alajmy",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 4,
+      "name": "إذاعة أحمد الحواشي",
+      "url": "https://backup.qurango.net/radio/ahmad_alhawashi",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 5,
+      "name": "إذاعة أحمد صابر",
+      "url": "https://backup.qurango.net/radio/ahmad_saber",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 6,
+      "name": "إذاعة أحمد نعينع",
+      "url": "https://backup.qurango.net/radio/ahmad_nauina",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 7,
+      "name": "إذاعة أكرم العلاقمي",
+      "url": "https://backup.qurango.net/radio/akram_alalaqmi",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 8,
+      "name": "إذاعة إدريس أبكر",
+      "url": "https://backup.qurango.net/radio/idrees_abkr",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 9,
+      "name": "إذاعة الزين محمد أحمد",
+      "url": "https://backup.qurango.net/radio/alzain_mohammad_ahmad",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 10,
+      "name": "إذاعة القارئ ياسين",
+      "url": "https://backup.qurango.net/radio/alqaria_yassen",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 11,
+      "name": "إذاعة العيون الكوشي",
+      "url": "https://backup.qurango.net/radio/aloyoon_alkoshi",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 12,
+      "name": "إذاعة توفيق الصايغ",
+      "url": "https://backup.qurango.net/radio/tawfeeq_assayegh",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 13,
+      "name": "إذاعة جمال شاكر عبدالله",
+      "url": "https://backup.qurango.net/radio/jamal_shaker_abdullah",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 14,
+      "name": "إذاعة خالد القحطاني",
+      "url": "https://backup.qurango.net/radio/khaled_alqahtani",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 15,
+      "name": "إذاعة خالد عبدالكافي",
+      "url": "https://backup.qurango.net/radio/khalid_abdulkafi",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 16,
+      "name": "إذاعة خليفة الطنيجي",
+      "url": "https://backup.qurango.net/radio/khalifa_altunaiji",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 17,
+      "name": "إذاعة سعد الغامدي",
+      "url": "https://backup.qurango.net/radio/saad_alghamdi",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 18,
+      "name": "إذاعة سعود الشريم",
+      "url": "https://backup.qurango.net/radio/saud_alshuraim",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 19,
+      "name": "إذاعة سهل ياسين",
+      "url": "https://backup.qurango.net/radio/sahl_yassin",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 20,
+      "name": "إذاعة زكي داغستاني",
+      "url": "https://backup.qurango.net/radio/zaki_daghistani",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 21,
+      "name": "إذاعة سيد رمضان",
+      "url": "https://backup.qurango.net/radio/sayeed_ramadan",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 22,
+      "name": "إذاعة شيرزاد عبدالرحمن طاهر",
+      "url": "https://backup.qurango.net/radio/shirazad_taher",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 23,
+      "name": "إذاعة صابر عبدالحكم",
+      "url": "https://backup.qurango.net/radio/saber_abdulhakm",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 24,
+      "name": "إذاعة صلاح البدير",
+      "url": "https://backup.qurango.net/radio/salah_albudair",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 25,
+      "name": "إذاعة صلاح الهاشم",
+      "url": "https://backup.qurango.net/radio/salah_alhashim",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 26,
+      "name": "إذاعة صلاح بو خاطر",
+      "url": "https://backup.qurango.net/radio/slaah_bukhatir",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 27,
+      "name": "إذاعة عادل ريان",
+      "url": "https://backup.qurango.net/radio/adel_ryyan",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 28,
+      "name": "إذاعة عبدالبارئ الثبيتي",
+      "url": "https://backup.qurango.net/radio/abdelbari_altoubayti",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 29,
+      "name": "إذاعة عبدالبارئ محمد",
+      "url": "https://backup.qurango.net/radio/abdulbari_mohammad",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 30,
+      "name": "إذاعة عبدالباسط عبدالصمد",
+      "url": "https://backup.qurango.net/radio/abdulbasit_abdulsamad_mojawwad",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 31,
+      "name": "إذاعة عبدالباسط عبدالصمد",
+      "url": "https://backup.qurango.net/radio/abdulbasit_abdulsamad_warsh",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 32,
+      "name": "إذاعة عبدالباسط عبدالصمد",
+      "url": "https://backup.qurango.net/radio/abdulbasit_abdulsamad",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 33,
+      "name": "إذاعة عبدالرحمن السديس",
+      "url": "https://backup.qurango.net/radio/abdulrahman_alsudaes",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 34,
+      "name": "إذاعة عبدالعزيز الأحمد",
+      "url": "https://backup.qurango.net/radio/abdul_aziz_alahmad",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 35,
+      "name": "إذاعة عبدالله المطرود",
+      "url": "https://backup.qurango.net/radio/abdullah_almattrod",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 36,
+      "name": "إذاعة عبدالله بصفر",
+      "url": "https://backup.qurango.net/radio/abdullah_basfer",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 37,
+      "name": "إذاعة عبدالله خياط",
+      "url": "https://backup.qurango.net/radio/abdullah_khayyat",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 38,
+      "name": "إذاعة عبدالله عواد الجهني",
+      "url": "https://backup.qurango.net/radio/abdullah_aljohany",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 39,
+      "name": "إذاعة عبدالرشيد صوفي",
+      "url": "https://backup.qurango.net/radio/abdulrasheed_soufi_khalaf",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 40,
+      "name": "إذاعة عبدالرشيد صوفي",
+      "url": "https://backup.qurango.net/radio/abdulrasheed_soufi_assosi",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 41,
+      "name": "إذاعة عبدالمحسن الحارثي",
+      "url": "https://backup.qurango.net/radio/abdulmohsin_alharthy",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 42,
+      "name": "إذاعة عبدالمحسن القاسم",
+      "url": "https://backup.qurango.net/radio/abdulmohsen_alqasim",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 43,
+      "name": "إذاعة عبدالمحسن العبيكان",
+      "url": "https://backup.qurango.net/radio/abdulmohsin_alobaikan",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 44,
+      "name": "إذاعة عبدالهادي أحمد كناكري",
+      "url": "https://backup.qurango.net/radio/abdulhadi_kanakeri",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 45,
+      "name": "إذاعة عبدالودود حنيف",
+      "url": "https://backup.qurango.net/radio/abdulwadood_haneef",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 46,
+      "name": "إذاعة علي بن عبدالرحمن الحذيفي",
+      "url": "https://backup.qurango.net/radio/ali_alhuthaifi",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 47,
+      "name": "إذاعة علي الحذيفي",
+      "url": "https://backup.qurango.net/radio/ali_alhuthaifi_qalon",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 48,
+      "name": " إذاعة علي جابر",
+      "url": "https://backup.qurango.net/radio/ali_jaber",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 49,
+      "name": " إذاعة علي حجاج السويسي",
+      "url": "https://backup.qurango.net/radio/ali_hajjaj_alsouasi",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 50,
+      "name": " إذاعة عماد زهير حافظ",
+      "url": "https://backup.qurango.net/radio/emad_hafez",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 51,
+      "name": " إذاعة عمر القزابري",
+      "url": "https://backup.qurango.net/radio/omar_alqazabri",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 52,
+      "name": " إذاعة فارس عباد",
+      "url": "https://backup.qurango.net/radio/fares_abbad",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 53,
+      "name": " إذاعة ناصر القطامي",
+      "url": "https://backup.qurango.net/radio/nasser_alqatami",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 54,
+      "name": " إذاعة نبيل الرفاعي",
+      "url": "https://backup.qurango.net/radio/nabil_al_rifay",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 55,
+      "name": " إذاعة نعمة الحسان",
+      "url": "https://backup.qurango.net/radio/neamah_alhassan",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 56,
+      "name": " إذاعة هاني الرفاعي",
+      "url": "https://backup.qurango.net/radio/hani_arrifai",
+      "recent_date": "2020-04-25 22:04:04"
+    },
+    {
+      "id": 57,
+      "name": " إذاعة وليد النائحي",
+      "url": "https://backup.qurango.net/radio/waleed_alnaehi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 58,
+      "name": " إذاعة ياسر الدوسري",
+      "url": "https://backup.qurango.net/radio/yasser_aldosari",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 59,
+      "name": " إذاعة ياسر القرشي",
+      "url": "https://backup.qurango.net/radio/yasser_alqurashi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 60,
+      "name": " إذاعة ياسر المزروعي ",
+      "url": "https://backup.qurango.net/radio/yasser_almazroyee",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 61,
+      "name": " إذاعة يحيى حوا",
+      "url": "https://backup.qurango.net/radio/yahya_hawwa",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 62,
+      "name": " إذاعة يوسف الشويعي",
+      "url": "https://backup.qurango.net/radio/yousef_alshoaey",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 63,
+      "name": " إذاعة ماهر المعيقلي",
+      "url": "https://backup.qurango.net/radio/maher",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 64,
+      "name": " إذاعة محمد الطبلاوي",
+      "url": "https://backup.qurango.net/radio/mohammad_altablaway",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 65,
+      "name": " إذاعة محمد اللحيدان",
+      "url": "https://backup.qurango.net/radio/mohammed_allohaidan",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 66,
+      "name": " إذاعة محمد أيوب",
+      "url": "https://backup.qurango.net/radio/mohammed_ayyub",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 67,
+      "name": " إذاعة محمد صالح عالم شاه",
+      "url": "https://backup.qurango.net/radio/mohammad_saleh_alim_shah",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 68,
+      "name": " إذاعة محمد جبريل",
+      "url": "https://backup.qurango.net/radio/mohammed_jibreel",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 69,
+      "name": " إذاعة محمد صديق المنشاوي",
+      "url": "https://backup.qurango.net/radio/mohammed_siddiq_alminshawi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 70,
+      "name": " إذاعة محمد صديق المنشاوي",
+      "url": "https://backup.qurango.net/radio/mohammed_siddiq_alminshawi_mojawwad",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 71,
+      "name": " إذاعة محمد عبدالكريم",
+      "url": "https://backup.qurango.net/radio/mohammad_abdullkarem",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 72,
+      "name": " إذاعة محمد عبدالحكيم سعيد العبدالله",
+      "url": "https://backup.qurango.net/radio/mohammad_alabdullah_albizi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 73,
+      "name": " إذاعة محمد عبدالحكيم سعيد العبدالله",
+      "url": "https://backup.qurango.net/radio/mohammad_alabdullah_aldorai",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 74,
+      "name": " إذاعة محمود خليل الحصري",
+      "url": "https://backup.qurango.net/radio/mahmoud_khalil_alhussary",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 75,
+      "name": " إذاعة محمود خليل الحصري",
+      "url": "https://backup.qurango.net/radio/mahmoud_khalil_alhussary_mojawwad",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 76,
+      "name": " إذاعة محمود خليل الحصري",
+      "url": "https://backup.qurango.net/radio/mahmoud_khalil_alhussary_warsh",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 77,
+      "name": " إذاعة محمود علي البنا",
+      "url": "https://backup.qurango.net/radio/mahmoud_ali__albanna",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 78,
+      "name": " إذاعة محمود علي البنا",
+      "url": "https://backup.qurango.net/radio/mahmoud_ali__albanna_mojawwad",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 79,
+      "name": " إذاعة مشاري العفاسي",
+      "url": "https://backup.qurango.net/radio/mishary_alafasi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 80,
+      "name": " إذاعة مصطفى إسماعيل",
+      "url": "https://backup.qurango.net/radio/mustafa_ismail",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 81,
+      "name": " إذاعة مصطفى اللاهوني",
+      "url": "https://backup.qurango.net/radio/mustafa_allahoni",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 82,
+      "name": " إذاعة مصطفى رعد العزاوي",
+      "url": "https://backup.qurango.net/radio/mustafa_raad_alazawy",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 83,
+      "name": " إذاعة مفتاح السلطني",
+      "url": "https://backup.qurango.net/radio/muftah_alsaltany_aldori_an_abi_amr ",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 84,
+      "name": " إذاعة ماهر شخاشيرو",
+      "url": "https://backup.qurango.net/radio/maher_shakhashero",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 85,
+      "name": " إذاعة محمود الشيمي",
+      "url": "https://backup.qurango.net/radio/mahmood_alsheimy",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 86,
+      "name": " إذاعة خالد المهنا",
+      "url": "https://backup.qurango.net/radio/khalid_almohana",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 87,
+      "name": " إذاعة عادل الكلباني",
+      "url": "https://backup.qurango.net/radio/adel_alkhalbany",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 88,
+      "name": " إذاعة موسى بلال",
+      "url": "https://backup.qurango.net/radio/mousa_bilal",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 89,
+      "name": "حاتم فريد الواعر",
+      "url": "https://backup.qurango.net/radio/hatem_fareed_alwaer",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 90,
+      "name": " إذاعة محمود الرفاعي",
+      "url": "https://backup.qurango.net/radio/mahmood_al_rifai",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 91,
+      "name": " إذاعة ابراهيم الدوسري",
+      "url": "https://backup.qurango.net/radio/ibrahim_aldosari",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 92,
+      "name": " إذاعة مفتاح السلطني",
+      "url": "https://backup.qurango.net/radio/muftah_alsaltany_aldorai",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 93,
+      "name": " إذاعة جمعان العصيمي",
+      "url": "https://backup.qurango.net/radio/jamaan_alosaimi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 94,
+      "name": " إذاعة مفتاح السلطني",
+      "url": "https://backup.qurango.net/radio/muftah_alsaltany",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 95,
+      "name": " إذاعة يوسف بن نوح أحمد",
+      "url": "https://backup.qurango.net/radio/yousef_bin_noah_ahmad",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 96,
+      "name": " إذاعة مفتاح السلطني",
+      "url": "https://backup.qurango.net/radio/muftah_alsaltany_ibn_thakwan_an_ibn_amr",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 97,
+      "name": " إذاعة معيض الحارثي",
+      "url": "https://backup.qurango.net/radio/moeedh_alharthi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 98,
+      "name": " إذاعة محمد رشاد الشريف",
+      "url": "https://backup.qurango.net/radio/mohammad_rashad_alshareef",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 99,
+      "name": " إذاعة أحمد خضر الطرابلسي",
+      "url": "https://backup.qurango.net/radio/ahmad_khader_altarabulsi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 100,
+      "name": " إذاعة أحمد الطرابلسي",
+      "url": "https://backup.qurango.net/radio/ahmed_altrabulsi",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 101,
+      "name": " إذاعة عبدالله الكندري",
+      "url": "https://backup.qurango.net/radio/abdullah_alkandari",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 102,
+      "name": " إذاعة أحمد عامر",
+      "url": "https://backup.qurango.net/radio/ahmed_amer",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 103,
+      "name": "إذاعة محمد عثمان خان",
+      "url": "https://backup.qurango.net/radio/mohammed_osman_khan",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 104,
+      "name": " إذاعة الدوكالي محمد العالم",
+      "url": "https://backup.qurango.net/radio/addokali_mohammad_alalim",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 105,
+      "name": " إذاعة محمد عبدالكريم",
+      "url": "https://backup.qurango.net/radio/mohammad_abdullkarem_alasbahani",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 106,
+      "name": " إذاعة الفاتح محمد الزبير",
+      "url": "https://backup.qurango.net/radio/alfateh_alzubair",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 107,
+      "name": " إذاعة طارق عبدالغني دعوب",
+      "url": "https://backup.qurango.net/radio/tareq_abdulgani_daawob",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 108,
+      "name": "-الإذاعة العامة - اذاعة متنوعة لمختلف القراء",
+      "url": "https://backup.qurango.net/radio/mix",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 109,
+      "name": "إذاعة -تلاوات خاشعة-",
+      "url": "https://backup.qurango.net/radio/salma",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 110,
+      "name": "إذاعة تكبيرات العيد",
+      "url": "https://backup.qurango.net/radio/eid",
+      "recent_date": "2020-06-27 02:41:26"
+    },
+    {
+      "id": 111,
+      "name": " إذاعة عبدالرحمن الماجد",
+      "url": "https://backup.qurango.net/radio/abdulrahman_almajed",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 113,
+      "name": "إذاعة الفتاوى العامة",
+      "url": "https://backup.qurango.net/radio/fatwa",
+      "recent_date": "2020-06-27 02:39:55"
+    },
+    {
+      "id": 114,
+      "name": "إذاعة الرقية الشرعية",
+      "url": "https://backup.qurango.net/radio/roqiah",
+      "recent_date": "2020-06-27 02:38:21"
+    },
+    {
+      "id": 115,
+      "name": "إذاعة ---سورة البقرة - لعدد من القراء---",
+      "url": "https://backup.qurango.net/radio/albaqarah",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 116,
+      "name": "إذاعة --تفسير القران الكريم--",
+      "url": "https://backup.qurango.net/radio/tafseer",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 117,
+      "name": "إذاعة خالد الجليل",
+      "url": "https://backup.qurango.net/radio/khalid_aljileel",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 118,
+      "name": "إذاعة ناصر الماجد",
+      "url": "https://backup.qurango.net/radio/nasser_almajed",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 119,
+      "name": "إذاعة هيثم الجدعاني",
+      "url": "https://backup.qurango.net/radio/hitham_aljadani",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 120,
+      "name": "إذاعة أحمد خليل شاهين",
+      "url": "https://backup.qurango.net/radio/ahmad_shaheen",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 121,
+      "name": "إذاعة عبدالله الموسى",
+      "url": "https://backup.qurango.net/radio/abdullah_almousa",
+      "recent_date": "2020-06-27 02:46:31"
+    },
+    {
+      "id": 122,
+      "name": "إذاعة عبدالله الخلف",
+      "url": "https://backup.qurango.net/radio/abdullah_alkhalaf",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 123,
+      "name": "-تراتيل قصيرة متميزة-",
+      "url": "https://backup.qurango.net/radio/tarateel",
+      "recent_date": "2020-04-25 22:04:05"
+    },
+    {
+      "id": 139,
+      "name": "إذاعة ماجد الزامل",
+      "url": "https://backup.qurango.net/radio/majed_alzamel",
+      "recent_date": "2020-06-27 01:43:46"
+    },
+    {
+      "id": 217,
+      "name": "إذاعة بندر بليلة",
+      "url": "https://backup.qurango.net/radio/bandar_balilah",
+      "recent_date": "2021-09-06 22:14:27"
+    },
+    {
+      "id": 248,
+      "name": "إذاعة ناصر العصفور",
+      "url": "https://backup.qurango.net/radio/nasser_alosfor",
+      "recent_date": "2020-05-05 02:27:02"
+    },
+    {
+      "id": 261,
+      "name": "إذاعة محمد أيوب - قراءة مميزة-",
+      "url": "https://backup.qurango.net/radio/ayyoub2",
+      "recent_date": "2020-06-27 02:35:33"
+    },
+    {
+      "id": 265,
+      "name": "إذاعة أحمد ديبان",
+      "url": "https://backup.qurango.net/radio/ahmad_deban",
+      "recent_date": "2020-06-27 01:46:13"
+    },
+    {
+      "id": 274,
+      "name": "أذاعة محمد أبوسنينة",
+      "url": "https://backup.qurango.net/radio/sneineh",
+      "recent_date": "2022-08-17 16:40:49"
+    },
+    {
+      "id": 275,
+      "name": "إذاعة محمد الأمين قنيوة",
+      "url": "https://backup.qurango.net/radio/qeniwa",
+      "recent_date": "2022-08-17 16:44:08"
+    },
+    {
+      "id": 287,
+      "name": "إذاعة عبدالرحمن الشحات",
+      "url": "https://backup.qurango.net/radio/a_alshahhat",
+      "recent_date": "2022-09-20 17:28:01"
+    },
+    {
+      "id": 307,
+      "name": "عبدالعزيز سحيم",
+      "url": "https://backup.qurango.net/radio/a_sheim",
+      "recent_date": "2023-10-11 04:18:00"
+    },
+    {
+      "id": 10902,
+      "name": "آيات السكينة",
+      "url": "https://backup.qurango.net/radio/sakeenah",
+      "recent_date": "2020-07-17 14:39:15"
+    },
+    {
+      "id": 10903,
+      "name": "---إذاعة صور من حياة الصحابة والتابعين رضوان الله عليهم---",
+      "url": "https://backup.qurango.net/radio/sahabah",
+      "recent_date": "2020-07-17 14:40:45"
+    },
+    {
+      "id": 10904,
+      "name": "المختصر في تفسير القرآن الكريم",
+      "url": "https://backup.qurango.net/radio/mukhtasartafsir",
+      "recent_date": "2021-03-25 17:28:18"
+    },
+    {
+      "id": 10906,
+      "name": "أذكار الصباح",
+      "url": "https://backup.qurango.net/radio/athkar_sabah",
+      "recent_date": "2021-08-27 12:48:42"
+    },
+    {
+      "id": 10907,
+      "name": "أذكار المساء",
+      "url": "https://backup.qurango.net/radio/athkar_masa",
+      "recent_date": "2021-08-27 12:49:07"
+    },
+    {
+      "id": 21114,
+      "name": "في ظلال السيرة النبوية - 400 حلقة عن سيرة نبينا محمد صلى الله عليه وسلم",
+      "url": "https://backup.qurango.net/radio/fi_zilal_alsiyra",
+      "recent_date": "2021-09-27 01:36:41"
+    },
+    {
+      "id": 21115,
+      "name": "المختصر في السيرة النبوية",
+      "url": "https://backup.qurango.net/radio/almukhtasar_fi_alsiyra",
+      "recent_date": "2025-05-30 11:38:35"
+    },
+    {
+      "id": 21116,
+      "name": "كتاب الاختيارات الفقهية في مسائل العبادات والمعاملات",
+      "url": "https://backup.qurango.net/radio/alaikhtiarat_alfiqhayh_bin_baz",
+      "recent_date": "2022-02-13 23:48:06"
+    },
+    {
+      "id": 21117,
+      "name": "تفسير القران الكريم-الخلاصة من تفسير الطبري",
+      "url": "https://backup.qurango.net/radio/tabri",
+      "recent_date": "2023-12-02 20:42:00"
+    },
+    {
+      "id": 109038,
+      "name": "صالح الهبدان",
+      "url": "https://backup.qurango.net/radio/saleh_alhabdan",
+      "recent_date": "2020-06-27 01:47:04"
+    },
+    {
+      "id": 109039,
+      "name": "ترجمة معاني القرآن باللغة الأوردية - عبدالباسط عبدالصمد",
+      "url": "https://backup.qurango.net/radio/translation_quran_urdu_basit",
+      "recent_date": "2024-04-13 04:18:10"
+    },
+    {
+      "id": 109040,
+      "name": "ترجمة معاني القرآن باللغة الأسبانية",
+      "url": "https://backup.qurango.net/radio/translation_quran_spanish_afs",
+      "recent_date": "2024-04-13 04:21:03"
+    },
+    {
+      "id": 109041,
+      "name": "ترجمة معاني القرآن باللغة الألبانية",
+      "url": "https://backup.qurango.net/radio/translation_quran_albanian",
+      "recent_date": "2024-04-13 04:22:03"
+    },
+    {
+      "id": 109042,
+      "name": "ترجمة معاني القرآن باللغة الألمانية",
+      "url": "https://backup.qurango.net/radio/translation_quran_german",
+      "recent_date": "2024-04-13 04:23:33"
+    },
+    {
+      "id": 109043,
+      "name": "ترجمة معاني القرآن باللغة الأمازيغية",
+      "url": "https://backup.qurango.net/radio/translation_quran_tamazight",
+      "recent_date": "2024-04-13 04:25:33"
+    },
+    {
+      "id": 109044,
+      "name": "ترجمة معاني القرآن باللغة الأوردية",
+      "url": "https://backup.qurango.net/radio/translation_quran_urdu_sds_shur",
+      "recent_date": "2024-04-13 04:26:22"
+    },
+    {
+      "id": 109045,
+      "name": "ترجمة معاني القرآن باللغة الأوردية",
+      "url": "https://backup.qurango.net/radio/translation_quran_urdu_minsh",
+      "recent_date": "2024-04-13 04:27:09"
+    },
+    {
+      "id": 109046,
+      "name": "ترجمة معاني القرآن باللغة الإنجليزية",
+      "url": "https://backup.qurango.net/radio/translation_quran_english_basit",
+      "recent_date": "2024-04-13 04:28:32"
+    },
+    {
+      "id": 109047,
+      "name": "ترجمة معاني القرآن باللغة الإنجليزية",
+      "url": "https://backup.qurango.net/radio/translation_quran_english_bsfr",
+      "recent_date": "2024-04-13 04:29:17"
+    },
+    {
+      "id": 109048,
+      "name": "ترجمة معاني القرآن باللغة الإنجليزية -ترجمة والك-",
+      "url": "https://backup.qurango.net/radio/translation_quran_english_walk_basit",
+      "recent_date": "2024-04-13 04:30:25"
+    },
+    {
+      "id": 109049,
+      "name": "ترجمة معاني القرآن باللغة البرتغالية",
+      "url": "https://backup.qurango.net/radio/translation_quran_portuguese",
+      "recent_date": "2024-04-13 04:31:18"
+    },
+    {
+      "id": 109050,
+      "name": "ترجمة معاني القرآن باللغة البوسنية",
+      "url": "https://backup.qurango.net/radio/translation_quran_bosnia",
+      "recent_date": "2024-04-13 04:32:27"
+    },
+    {
+      "id": 109051,
+      "name": "ترجمة معاني القرآن باللغة التركية",
+      "url": "https://backup.qurango.net/radio/translation_quran_turkish",
+      "recent_date": "2024-04-13 04:33:38"
+    },
+    {
+      "id": 109052,
+      "name": "ترجمة معاني القرآن باللغة الروسية",
+      "url": "https://backup.qurango.net/radio/translation_quran_Russia",
+      "recent_date": "2024-04-13 04:35:33"
+    },
+    {
+      "id": 109053,
+      "name": "ترجمة معاني القرآن باللغة الصينية",
+      "url": "https://backup.qurango.net/radio/translation_quran_chinese",
+      "recent_date": "2024-04-13 04:36:48"
+    },
+    {
+      "id": 109054,
+      "name": "ترجمة معاني القرآن باللغة الفارسية",
+      "url": "https://backup.qurango.net/radio/translation_quran_farsi",
+      "recent_date": "2024-04-13 05:07:34"
+    },
+    {
+      "id": 109055,
+      "name": "ترجمة معاني القرآن باللغة الفرنسية",
+      "url": "https://backup.qurango.net/radio/translation_quran_french",
+      "recent_date": "2024-04-13 05:08:08"
+    },
+    {
+      "id": 109056,
+      "name": "ترجمة معاني القرآن باللغة الكردية",
+      "url": "https://backup.qurango.net/radio/translation_quran_kurdish",
+      "recent_date": "2024-04-13 05:10:28"
+    },
+    {
+      "id": 109057,
+      "name": "ترجمة معاني القرآن باللغة الكورية",
+      "url": "https://backup.qurango.net/radio/translation_quran_Korean",
+      "recent_date": "2024-04-13 05:10:52"
+    },
+    {
+      "id": 109058,
+      "name": "ترجمة معاني القرآن باللغة المجرية",
+      "url": "https://backup.qurango.net/radio/translation_quran_hungarian",
+      "recent_date": "2024-04-13 05:16:54"
+    },
+    {
+      "id": 109059,
+      "name": "ترجمة معاني القرآن باللغة اليونانية",
+      "url": "https://backup.qurango.net/radio/translation_quran_greek",
+      "recent_date": "2024-04-13 05:17:34"
+    },
+    {
+      "id": 109060,
+      "name": "سورة الملك",
+      "url": "https://backup.qurango.net/radio/Surah_Al-Mulk",
+      "recent_date": "2024-04-13 05:32:01"
+    },
+    {
+      "id": 109061,
+      "name": "فضل شهر رمضان",
+      "url": "https://backup.qurango.net/radio/ramadan",
+      "recent_date": "2024-04-13 05:33:01"
+    },
+    {
+      "id": 109062,
+      "name": "ترجمة معاني القرآن باللغة الهوسا",
+      "url": "https://backup.qurango.net/radio/Translation_Quran_Hausa",
+      "recent_date": "2024-09-26 00:18:57"
+    },
+    {
+      "id": 109066,
+      "name": "صحيح مسلم",
+      "url": "https://backup.qurango.net/radio/saheh-muslim",
+      "recent_date": "2025-05-20 18:30:06"
+    },
+    {
+      "id": 109067,
+      "name": "صحيح البخاري",
+      "url": "https://backup.qurango.net/radio/saheh-bokharee",
+      "recent_date": "2025-05-20 18:34:32"
+    },
+    {
+      "id": 109069,
+      "name": "***قصص الأنبياء***",
+      "url": "https://backup.qurango.net/radio/alanbiya",
+      "recent_date": "2025-07-04 18:34:32"
+    },
+    {
+      "id": 109073,
+      "name": "رياض الصالحين",
+      "url": "https://backup.qurango.net/radio/riyad",
+      "recent_date": "2025-07-20 13:36:55"
+    },
+    {
+      "id": 109074,
+      "name": "عبدالله البعيجان",
+      "url": "https://backup.qurango.net/radio/buajan",
+      "recent_date": "2025-07-20 19:47:08"
+    },
+    {
+      "id": 109075,
+      "name": "أحمد طالب بن حميد",
+      "url": "https://backup.qurango.net/radio/a_binhameed",
+      "recent_date": "2025-07-20 19:54:30"
+    },
+    {
+      "id": 109076,
+      "name": "تفسير غريب القرآن",
+      "url": "https://backup.qurango.net/radio/gareeb-quran",
+      "recent_date": "2025-09-06 11:00:48"
+    },
+    {
+      "id": 109077,
+      "name": "بدر التركي",
+      "url": "https://backup.qurango.net/radio/bader",
+      "recent_date": "2025-09-12 19:09:35"
+    },
+    {
+      "id": 109078,
+      "name": "هزاع البلوشي",
+      "url": "https://backup.qurango.net/radio/hazza",
+      "recent_date": "2025-09-12 19:22:27"
+    },
+    {
+      "id": 109082,
+      "name": "إذاعة القرآن الكريم - السعودية",
+      "url": "https://stream.radiojar.com/0tpy1h0kxtzuv",
+      "recent_date": "2026-02-13 17:41:50"
+    },
+    {
+      "id": 109083,
+      "name": "الشمائل المحمدية",
+      "url": "https://backup.qurango.net/radio/shmaeel",
+      "recent_date": "2026-04-08 10:58:22"
+    }
+  ]
+}
         // ... باقي العناصر بنفس النمط (تم حذف التكرار للاختصار، لكن في التطبيق الفعلي يجب إعطاء كل عنصر id فريد)
         // مثال لإصلاح البقية: أضف رقم تسلسلي أو ميزة فريدة.
     ];
-
-    // ملاحظة: تم تعديل المعرفات أعلاه كمثال. عملياً، يمكن توليد المعرفات تلقائياً:
-    // BASE_RADIOS = BASE_RADIOS.map((r, idx) => ({ ...r, id: r.id + '_' + idx }));
-    // لكننا سنفعل ذلك ديناميكياً لضمان عدم التكرار.
-
-    // ============================================================
-    // 2. تحسين دالة تحويل الرابط إلى اسم عربي
-    // ============================================================
-    function urlToArabicName(url) {
-        let slug = url.split('/').pop();
-        let name = slug.replace(/_/g, ' ');
-        const mapping = {
-            'ahmed': 'أحمد', 'ahmad': 'أحمد', 'mohammed': 'محمد', 'mohammad': 'محمد',
-            'ali': 'علي', 'ibrahim': 'إبراهيم', 'khalid': 'خالد', 'khaled': 'خالد',
-            'abdul': 'عبد', 'abdullah': 'عبدالله', 'abdulrahman': 'عبدالرحمن', 'abdulbasit': 'عبدالباسط',
-            'abdulsamad': 'عبدالصمد', 'al': 'ال', 'bin': 'بن', 'abu': 'أبو', 'bakr': 'بكر',
-            'soufi': 'صوفي', 'hussary': 'الحصري', 'minshawi': 'المنشاوي', 'alafasi': 'العفاسي',
-            'sudaes': 'السديس', 'shuraim': 'الشريم', 'dosari': 'الدوسري', 'qatami': 'القطامي',
-            'maher': 'ماهر', 'yasser': 'ياسر', 'ayyoub': 'أيوب', 'mustafa': 'مصطفى',
-            'jaber': 'جابر', 'bukhatir': 'بو خاطر', 'alajmy': 'العجمي', 'alghamdi': 'الغامدي',
-            'mishary': 'مشاري', 'tablawi': 'الطبلاوي', 'banna': 'البنا', 'rifai': 'الرفاعي',
-            'arifai': 'الرفاعي', 'hani': 'هاني', 'nabil': 'نبيل', 'nasser': 'ناصر',
-            'saad': 'سعد', 'salah': 'صلاح', 'tareq': 'طارق', 'adel': 'عادل',
-            'emad': 'عماد', 'fares': 'فارس', 'majed': 'ماجد', 'moeedh': 'معيض',
-            'muftah': 'مفتاح', 'mousa': 'موسى', 'yousef': 'يوسف', 'yahya': 'يحيى',
-            'sahl': 'سهل', 'sayeed': 'سيد', 'ramadan': 'رمضان', 'shirazad': 'شيرزاد',
-            'saber': 'صابر', 'zaki': 'زكي', 'daghistani': 'داغستاني', 'jamaan': 'جمعان',
-            'osaimi': 'العصيمي', 'hatem': 'حاتم', 'fareed': 'فريد', 'alwaer': 'الواعظ',
-            'mohana': 'المهنا', 'abdulgani': 'عبدالجني', 'daawob': 'دعوب', 'alkhalbany': 'الكلباني',
-            'almajed': 'الماجد', 'kandari': 'الكندري', 'hajjaj': 'حجاج', 'alsouasi': 'السويسي',
-            'hafez': 'حافظ', 'qazabri': 'القزابري', 'abbad': 'عباد', 'shakhashero': 'شخاشيرو',
-            'allaohaidan': 'اللحيدان', 'jibreel': 'جبريل', 'rashad': 'رشاد', 'alshareef': 'الشريف',
-            'saleh': 'صالح', 'alim': 'عالم', 'shah': 'شاه', 'abdullkarem': 'عبدالكريم',
-            'alasbahani': 'الأصبهاني', 'osman': 'عثمان', 'khan': 'خان', 'shimy': 'الشيمي',
-            'allahoni': 'اللاهوني', 'raad': 'رعد', 'alazawy': 'العزاوي', 'harthi': 'الحارثي',
-            'aldori': 'الدوري', 'amr': 'عمرو', 'thakwan': 'ذكوان', 'bilal': 'بلال',
-            'neamah': 'نعمة', 'hassan': 'حسان', 'naehi': 'النائحي', 'qurashi': 'القرشي',
-            'mazroyee': 'المزروعي', 'hawwa': 'حوا', 'shoaey': 'الشويعي', 'tarateel': 'تراتيل قصيرة',
-            'sahabah': 'صور من حياة الصحابة', 'mix': 'إذاعة متنوعة', 'mukhtasartafsir': 'المختصر في التفسير',
-            'deban': 'ديبان', 'athkar': 'أذكار', 'sabah': 'الصباح', 'masa': 'المساء',
-            'albaqarah': 'سورة البقرة', 'tafseer': 'تفسير القرآن', 'salma': 'تلاوات خاشعة',
-            'sakeenah': 'آيات السكينة', 'hawashi': 'الحواشي', 'shaheen': 'شاهين', 'nauina': 'نعينع',
-            'alaqmi': 'العلاقمي', 'alakdar': 'الأخضر', 'abkr': 'أبكر', 'roqiah': 'الرقية الشرعية',
-            'zain': 'الزين', 'oyoon': 'العيون', 'koshi': 'الكوشي', 'fatwa': 'الفتاوى',
-            'yassen': 'ياسين', 'eid': 'تكبيرات العيد', 'assayegh': 'الصايغ', 'jamal': 'جمال',
-            'shaker': 'شاكر', 'jileel': 'الجليل', 'qahtani': 'القحطاني', 'abdulkafi': 'عبدالكافي',
-            'tunaiji': 'الطنيجي', 'ghamdi': 'الغامدي', 'yassin': 'ياسين', 'shatri': 'الشاطري',
-            'taher': 'طاهر', 'abdulhakm': 'عبدالحكم', 'budair': 'البدير', 'hashim': 'الهاشم',
-            'ryyan': 'ريان', 'thubaiti': 'الثبيتي', 'bari': 'البارئ', 'rasheed': 'الرشيد',
-            'aziz': 'العزيز', 'khalaf': 'خلف', 'assosi': 'السوسي', 'matroud': 'المطرود',
-            'basfar': 'بصفر', 'khayyat': 'خياط', 'johany': 'الجهني', 'mohsin': 'محسن',
-            'obaikan': 'العبيكان', 'qasim': 'القاسم', 'kanakeri': 'كناكري', 'wadood': 'الودود',
-            'haneef': 'حنيف', 'huthaifi': 'الحذيفي', 'zamil': 'الزامل', 'meaqli': 'المعيقلي',
-            'sneineh': 'السنينة', 'qeniwa': 'قنيوة', 'alosfor': 'العصفور'
-        };
-        let words = name.split(' ');
-        let translated = words.map(w => mapping[w.toLowerCase()] || w).join(' ');
-        translated = translated.replace(/عبد ال/g, 'عبد ال');
-        // تحسين: إذا بقي النص إنجليزياً بالكامل، استخدم الرابط كاسم احتياطي
-        if (!/[\u0600-\u06FF]/.test(translated)) {
-            translated = slug.replace(/_/g, ' ');
-        }
-        return translated.charAt(0).toUpperCase() + translated.slice(1);
-    }
-
-    // ============================================================
-    // 3. القائمة الجديدة من الروابط (مع تحويلها)
-    // ============================================================
-    const QuranRadioList = [
-        "https://Qurango.net/radio/ahmed_altrabulsi", "https://Qurango.net/radio/ahmad_khader_altarabulsi",
-                       "https://Qurango.net/radio/ahmed_altrabulsi", "https://Qurango.net/radio/ahmad_khader_altarabulsi",
-                "https://Qurango.net/radio/ahmed_amer", "https://Qurango.net/radio/ibrahim_aldosari",
-                "https://Qurango.net/radio/addokali_mohammad_alalim", "https://Qurango.net/radio/alfateh_alzubair",
-                "https://Qurango.net/radio/jamaan_alosaimi", "https://Qurango.net/radio/hatem_fareed_alwaer",
-                "https://Qurango.net/radio/khalid_almohana", "https://Qurango.net/radio/tareq_abdulgani_daawob",
-                "https://Qurango.net/radio/adel_alkhalbany", "https://Qurango.net/radio/abdulrahman_almajed",
-                "https://Qurango.net/radio/abdullah_alkandari", "https://Qurango.net/radio/ali_jaber",
-                "https://Qurango.net/radio/ali_hajjaj_alsouasi", "https://Qurango.net/radio/emad_hafez",
-                "https://Qurango.net/radio/omar_alqazabri", "https://Qurango.net/radio/fares_abbad",
-                "https://Qurango.net/radio/maher_al_meaqli", "https://Qurango.net/radio/maher_shakhashero",
-                "https://Qurango.net/radio/mohammed_ayyub", "https://Qurango.net/radio/mohammad_altablaway",
-                "https://Qurango.net/radio/mohammed_allohaidan", "https://Qurango.net/radio/mohammed_jibreel",
-                "https://Qurango.net/radio/mohammad_rashad_alshareef", "https://Qurango.net/radio/mohammad_saleh_alim_shah",
-                "https://Qurango.net/radio/mohammed_siddiq_alminshawi", "https://Qurango.net/radio/mohammed_siddiq_alminshawi_mojawwad",
-                "https://Qurango.net/radio/mohammad_alabdullah_albizi", "https://Qurango.net/radio/mohammad_alabdullah_aldorai",
-                "https://Qurango.net/radio/mohammad_abdullkarem", "https://Qurango.net/radio/mohammad_abdullkarem_alasbahani",
-                "https://Qurango.net/radio/mahmood_al_rifai", "https://Qurango.net/radio/mahmood_alsheimy",
-                "https://Qurango.net/radio/mahmoud_khalil_alhussary", "https://Qurango.net/radio/mahmoud_khalil_alhussary_mojawwad",
-                "https://Qurango.net/radio/mahmoud_khalil_alhussary_warsh", "https://Qurango.net/radio/mahmoud_ali__albanna",
-                "https://Qurango.net/radio/mahmoud_ali__albanna_mojawwad", "https://Qurango.net/radio/mishary_alafasi",
-                "https://Qurango.net/radio/mustafa_ismail", "https://Qurango.net/radio/mustafa_allahoni",
-                "https://Qurango.net/radio/mustafa_raad_alazawy", "https://Qurango.net/radio/moeedh_alharthi",
-                "https://Qurango.net/radio/muftah_alsaltany_aldori_an_abi_amr", "https://Qurango.net/radio/muftah_alsaltany_aldorai",
-                "https://Qurango.net/radio/muftah_alsaltany", "https://Qurango.net/radio/muftah_alsaltany_ibn_thakwan_an_ibn_amr",
-                "https://Qurango.net/radio/mousa_bilal", "https://Qurango.net/radio/nasser_alqatami",
-                "https://Qurango.net/radio/nabil_al_rifay", "https://Qurango.net/radio/neamah_alhassan",
-                "https://Qurango.net/radio/hani_arrifai", "https://Qurango.net/radio/waleed_alnaehi",
-                "https://Qurango.net/radio/yasser_aldosari", "https://Qurango.net/radio/yasser_alqurashi",
-                "https://Qurango.net/radio/yasser_almazroyee", "https://Qurango.net/radio/yahya_hawwa",
-                "https://Qurango.net/radio/yousef_alshoaey", "https://Qurango.net/radio/yousef_bin_noah_ahmad",
-                "https://Qurango.net/radio/tarateel", "https://qurango.net/radio/sahabah", "https://Qurango.net/radio/mix",
-                "https://qurango.net/radio/mukhtasartafsir", "https://Qurango.net/radio/ahmad_deban",
-                "https://qurango.net/radio/athkar_sabah", "https://qurango.net/radio/athkar_masa",
-                "https://qurango.net/radio/albaqarah", "https://qurango.net/radio/tafseer", "https://qurango.net/radio/salma",
-                "https://qurango.net/radio/sakeenah", "https://Qurango.net/radio/ahmad_alhawashi", "https://Qurango.net/radio/ahmad_alajmy",
-                "https://Qurango.net/radio/ahmad_shaheen", "https://Qurango.net/radio/ahmad_saber", "https://Qurango.net/radio/ahmad_nauina",
-                "https://Qurango.net/radio/akram_alalaqmi", "https://Qurango.net/radio/ibrahim_alakdar", "https://Qurango.net/radio/idrees_abkr",
-                "https://qurango.net/radio/roqiah", "https://Qurango.net/radio/alzain_mohammad_ahmad", "https://Qurango.net/radio/aloyoon_alkoshi",
-                "https://qurango.net/radio/fatwa", "https://Qurango.net/radio/alqaria_yassen", "https://qurango.net/radio/eid",
-                "https://Qurango.net/radio/tawfeeq_assayegh", "https://Qurango.net/radio/jamal_shaker_abdullah", "https://Qurango.net/radio/khalid_aljileel",
-                "https://Qurango.net/radio/khaled_alqahtani", "https://Qurango.net/radio/khalid_abdulkafi", "https://Qurango.net/radio/khalifa_altunaiji",
-                "https://Qurango.net/radio/zaki_daghistani", "https://Qurango.net/radio/saad_alghamdi", "https://Qurango.net/radio/saud_alshuraim",
-                "https://Qurango.net/radio/sahl_yassin", "https://Qurango.net/radio/sayeed_ramadan", "https://Qurango.net/radio/shaik_abu_bakr_al_shatri",
-                "https://Qurango.net/radio/shirazad_taher", "https://Qurango.net/radio/saber_abdulhakm", "https://Qurango.net/radio/salah_albudair",
-                "https://Qurango.net/radio/salah_alhashim", "https://Qurango.net/radio/slaah_bukhatir", "https://Qurango.net/radio/adel_ryyan",
-                "https://Qurango.net/radio/abdelbari_altoubayti", "https://Qurango.net/radio/abdulbari_mohammad", "https://Qurango.net/radio/abdulbasit_abdulsamad_mojawwad",
-                "https://Qurango.net/radio/abdulbasit_abdulsamad_warsh", "https://Qurango.net/radio/abdulbasit_abdulsamad", "https://Qurango.net/radio/abdulrahman_alsudaes",
-                "https://Qurango.net/radio/abdulrasheed_soufi_khalaf", "https://Qurango.net/radio/abdulrasheed_soufi_assosi", "https://Qurango.net/radio/abdul_aziz_alahmad",
-                "https://Qurango.net/radio/abdullah_alkhalaf", "https://Qurango.net/radio/abdullah_almattrod", "https://Qurango.net/radio/abdullah_almousa",
-                "https://Qurango.net/radio/abdullah_basfer", "https://Qurango.net/radio/abdullah_khayyat", "https://Qurango.net/radio/abdullah_aljohany",
-                "https://Qurango.net/radio/abdulmohsin_alharthy", "https://Qurango.net/radio/abdulmohsin_alobaikan", "https://Qurango.net/radio/abdulmohsen_alqasim",
-                "https://Qurango.net/radio/abdulhadi_kanakeri", "https://Qurango.net/radio/abdulwadood_haneef", "https://Qurango.net/radio/ali_alhuthaifi_qalon",
-                "https://Qurango.net/radio/ali_alhuthaifi", "https://qurango.net/radio/ayyoub2", "https://Qurango.net/radio/mohammed_osman_khan",
-                "https://Qurango.net/radio/nasser_almajed", "https://Qurango.net/radio/hitham_aljadani", "https://Qurango.net/radio/bandar_balilah",
-                "https://Qurango.net/radio/fi_zilal_alsiyra", "https://Qurango.net/radio/alaikhtiarat_alfiqhayh_bin_baz", "https://Qurango.net/radio/majed_alzamel",
-                "https://Qurango.net/radio/sneineh", "https://Qurango.net/radio/qeniwa", "https://Qurango.net/radio/nasser_alosfor"
-            ];
-
-    const NEW_RADIOS_FROM_LIST = QuranRadioList.map((url, idx) => {
-        let name = urlToArabicName(url);
-        name = name.replace(/^إذاعة\s+/, '').replace(/^إذاعة/, '');
-        if (name === 'تراتيل قصيرة') name = 'تراتيل قصيرة متميزة';
-        if (name === 'صور من حياة الصحابة') name = 'صور من حياة الصحابة رضوان الله عليهم';
-        if (name === 'إذاعة متنوعة') name = 'إذاعة عامة متنوعة';
-        if (name === 'المختصر في التفسير') name = 'المختصر في تفسير القرآن الكريم';
-        if (name === 'تفسير القرآن') name = 'تفسير القرآن الكريم';
-        if (name === 'آيات السكينة') name = 'إذاعة آيات السكينة';
-        return {
-            id: `list_${idx}`,
-            name: name,
-            radio_url: url,
-            category: "إذاعات إضافية"
-        };
-    });
-
-    // ============================================================
-    // 4. جلب الإذاعات الخارجية مع معالجة الأخطاء و CORS
-    // ============================================================
-    async function fetchExternalRadios() {
-        try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000); // مهلة 10 ثوانٍ
-            const response = await fetch('https://www.mp3quran.net/api/v3/radios?language=ar', { signal: controller.signal });
-            clearTimeout(timeoutId);
-            if (!response.ok) throw new Error('HTTP ' + response.status);
-            const data = await response.json();
-            let external = [];
-            if (Array.isArray(data)) external = data;
-            else if (data.radios && Array.isArray(data.radios)) external = data.radios;
-            else if (data.data && Array.isArray(data.data)) external = data.data;
-            return external.map((r, idx) => ({
-                id: `ext_${idx}`,
-                name: r.name || r.title || "إذاعة خارجية",
-                radio_url: r.url || r.stream || "",
-                category: r.category || "إذاعات عالمية"
-            })).filter(r => r.radio_url && r.radio_url.startsWith('http'));
-        } catch (err) {
-            console.warn('فشل تحميل الإذاعات الخارجية:', err);
-            // إظهار رسالة للمستخدم (اختياري)
-            const errorDiv = document.getElementById('error-message');
-            if (errorDiv) {
-                errorDiv.textContent = 'لم نتمكن من تحميل الإذاعات الإضافية، لكن يمكنك الاستماع إلى القائمة الأساسية.';
-                errorDiv.style.display = 'block';
-                setTimeout(() => { errorDiv.style.display = 'none'; }, 5000);
-            }
-            return [];
-        }
-    }
-
-    // ============================================================
-    // 5. دمج القوائم مع تجنب التكرار وتوليد معرفات فريدة
-    // ============================================================
-    function mergeRadios(base, newList, external) {
-        const urlSet = new Set();
-        const all = [];
-        const addIfNew = (item) => {
-            if (!urlSet.has(item.radio_url)) {
-                urlSet.add(item.radio_url);
-                all.push(item);
-            }
-        };
-        // إضافة معرفات فريدة للقاعدة (لأن بعضها مكرر)
-        const baseWithUniqueIds = base.map((item, idx) => ({
-            ...item,
-            id: item.id + '_' + idx  // ضمان التفرد
-        }));
-        baseWithUniqueIds.forEach(addIfNew);
-        newList.forEach(addIfNew);
-        external.forEach(addIfNew);
-        return all;
-    }
-
-    // ============================================================
-    // 6. استخراج الاسم الأساسي للتجميع الذكي
-    // ============================================================
-    function getBaseName(fullName) {
-        const clean = fullName.replace(/[\s\-–—]+(مجود|مرتل|رواية|تلاوة|ترتيل|تفسير|فتاوى|دروس|سيرة|أذكار|رقية|ترجمة).*$/i, '');
-        if (clean.includes('عبد الباسط')) return 'عبد الباسط عبد الصمد';
-        if (clean.includes('الحصري')) return 'محمود خليل الحصري';
-        if (clean.includes('المنشاوي')) return 'محمد صديق المنشاوي';
-        if (clean.includes('العفاسي')) return 'مشاري العفاسي';
-        if (clean.includes('السديس')) return 'عبد الرحمن السديس';
-        if (clean.includes('الشريم')) return 'سعود الشريم';
-        if (clean.includes('المعيقلي')) return 'ماهر المعيقلي';
-        if (clean.includes('الدوسري')) return 'ياسر الدوسري';
-        if (clean.includes('محمد أيوب')) return 'محمد أيوب';
-        if (clean.includes('مصطفى إسماعيل')) return 'مصطفى إسماعيل';
-        if (clean.includes('العجمي')) return 'أحمد بن علي العجمي';
-        if (clean.includes('بو خاطر')) return 'صلاح بو خاطر';
-        if (clean.includes('علي جابر')) return 'علي جابر';
-        if (clean.includes('القطامي')) return 'ناصر القطامي';
-        if (clean.includes('الرفاعي') && clean.includes('هاني')) return 'هاني الرفاعي';
-        if (clean.includes('الحرم المكي')) return 'إذاعة الحرم المكي';
-        if (clean.includes('القاهرة')) return 'إذاعة القرآن الكريم من القاهرة';
-        if (clean.includes('أذان نصر الدين')) return 'أذان نصر الدين طوبار';
-        return clean;
-    }
-
-    // ============================================================
-    // 7. ترتيب القراء (المشاهير أولاً)
-    // ============================================================
-    const famousOrder = [
-        'عبد الباسط عبد الصمد', 'محمود خليل الحصري', 'محمد صديق المنشاوي', 'مشاري العفاسي',
-        'عبد الرحمن السديس', 'سعود الشريم', 'ماهر المعيقلي', 'ياسر الدوسري',
-        'محمد أيوب', 'مصطفى إسماعيل', 'أحمد بن علي العجمي', 'صلاح بو خاطر',
-        'علي جابر', 'ناصر القطامي', 'هاني الرفاعي', 'إذاعة الحرم المكي', 'إذاعة القرآن الكريم من القاهرة',
-        'أذان نصر الدين طوبار'
-    ];
-    function sortReaders(list) {
-        const groups = new Map();
-        list.forEach(item => {
-            const base = getBaseName(item.name);
-            if (!groups.has(base)) groups.set(base, []);
-            groups.get(base).push(item);
-        });
-        const groupArray = Array.from(groups.entries());
-        groupArray.sort((a, b) => {
-            const idxA = famousOrder.indexOf(a[0]);
-            const idxB = famousOrder.indexOf(b[0]);
-            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-            if (idxA !== -1) return -1;
-            if (idxB !== -1) return 1;
-            return a[0].localeCompare(b[0], 'ar');
-        });
-        const result = [];
-        for (const [_, items] of groupArray) {
-            items.sort((x, y) => x.name.localeCompare(y.name, 'ar'));
-            result.push(...items);
-        }
-        return result;
-    }
-
-    // ============================================================
-    // 8. تطبيع النص للبحث
-    // ============================================================
-    function normalizeArabic(text) {
-        return text.replace(/[إأآا]/g, 'ا').replace(/[ى]/g, 'ي').replace(/[ؤ]/g, 'و').replace(/[ئ]/g, 'ي').replace(/[ًٌٍَُِّْ]/g, '').toLowerCase();
-    }
-
-    // ============================================================
-    // 9. بدء تشغيل التطبيق (مع تحسينات إعادة المحاولة والتخزين)
-    // ============================================================
-    (async function init() {
-        const externalRadios = await fetchExternalRadios();
-        const merged = mergeRadios(BASE_RADIOS, NEW_RADIOS_FROM_LIST, externalRadios);
-        const finalList = sortReaders(merged);
-
-        const container = document.getElementById('readers-container');
-        const readersCount = document.getElementById('readers-count');
-        const searchInput = document.getElementById('search');
-        const playBtn = document.getElementById('play-btn');
-        const playIcon = document.getElementById('play-icon');
-        const playerTitle = document.getElementById('player-title');
-        const playerSubtitle = document.getElementById('player-subtitle');
-        const errorMsgDiv = document.getElementById('error-message');
-        const themeToggle = document.getElementById('theme-toggle');
-
-        let audio = null;
-        let isPlaying = false;
-        let currentReader = null;
-        let userStopped = false;
-        let retryTimeout = null;
-        let retryCount = 0;
-        const MAX_RETRIES = 3;
-
-        function initAudio() {
-            if (!audio) {
-                audio = new Audio();
-                audio.setAttribute('playsinline', 'true');
-                audio.addEventListener('ended', () => {
-                    if (currentReader && isPlaying && !userStopped) {
-                        audio.play().catch(e => console.log('ended retry', e));
-                    }
-                });
-                audio.addEventListener('error', () => {
-                    if (currentReader && isPlaying && !userStopped && retryCount < MAX_RETRIES) {
-                        retryCount++;
-                        errorMsgDiv.textContent = `حدث خطأ في الاتصال، جاري إعادة المحاولة (${retryCount}/${MAX_RETRIES})...`;
-                        errorMsgDiv.style.display = 'block';
-                        if (retryTimeout) clearTimeout(retryTimeout);
-                        retryTimeout = setTimeout(() => {
-                            if (currentReader && isPlaying && !userStopped) {
-                                audio.src = currentReader.radio_url; // لا حاجة لـ .load()
-                                audio.play().catch(() => {
-                                    if (retryCount >= MAX_RETRIES) {
-                                        errorMsgDiv.textContent = 'تعذر الاتصال بعد عدة محاولات. تأكد من اتصالك بالإنترنت أو جرب محطة أخرى.';
-                                    }
-                                });
-                            }
-                        }, 3000);
-                    } else if (retryCount >= MAX_RETRIES) {
-                        errorMsgDiv.textContent = 'فشل تشغيل هذه الإذاعة. الرابط قد لا يعمل.';
-                        isPlaying = false;
-                        playIcon.className = 'fas fa-play';
-                        if (currentReader) {
-                            const activeCard = document.querySelector(`.reader-card[data-id="${currentReader.id}"]`);
-                            if (activeCard) activeCard.classList.remove('active');
-                        }
-                        currentReader = null;
-                    } else {
-                        errorMsgDiv.style.display = 'none';
-                    }
-                });
-                audio.addEventListener('play', () => {
-                    isPlaying = true;
-                    playIcon.className = 'fas fa-pause';
-                    errorMsgDiv.style.display = 'none';
-                    retryCount = 0; // إعادة تعيين المحاولات عند النجاح
-                });
-                audio.addEventListener('pause', () => {
-                    isPlaying = false;
-                    playIcon.className = 'fas fa-play';
-                });
-            }
-            return audio;
-        }
-
-        function escapeHtml(str) {
-            return str.replace(/[&<>]/g, function(m) {
-                if (m === '&') return '&amp;';
-                if (m === '<') return '&lt;';
-                if (m === '>') return '&gt;';
-                return m;
-            });
-        }
-
-        function renderReaders(list) {
-            container.innerHTML = "";
-            if (list.length === 0) {
-                container.innerHTML = '<div style="text-align:center; padding:40px;">لا توجد نتائج</div>';
-            } else {
-                list.forEach(reader => {
-                    const card = document.createElement('div');
-                    card.className = 'reader-card';
-                    card.setAttribute('data-id', reader.id);
-                    card.setAttribute('role', 'button');
-                    card.setAttribute('tabindex', '0');
-                    card.setAttribute('aria-label', `تشغيل ${reader.name}`);
-                    card.innerHTML = `<div class="reader-header">
-                        <div class="reader-avatar">${escapeHtml(reader.name.charAt(0))}</div>
-                        <div class="reader-info">
-                            <div class="reader-name">${escapeHtml(reader.name)}</div>
-                            <div class="reader-category">${reader.category || 'قارئ'}</div>
-                        </div>
-                    </div>`;
-                    card.onclick = () => playReader(reader, card);
-                    card.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playReader(reader, card); } };
-                    container.appendChild(card);
-                });
-            }
-            readersCount.textContent = `${list.length} قارئ`;
-        }
-
-        function playReader(reader, card) {
-            userStopped = false;
-            retryCount = 0;
-            if (retryTimeout) clearTimeout(retryTimeout);
-            if (!audio) audio = initAudio();
-            if (currentReader && currentReader.id === reader.id && isPlaying) {
-                audio.pause();
-                userStopped = true;
-                document.querySelectorAll('.reader-card').forEach(c => c.classList.remove('active'));
-                return;
-            }
-            document.querySelectorAll('.reader-card').forEach(c => c.classList.remove('active'));
-            if (card) card.classList.add('active');
-            currentReader = reader;
-            playerTitle.textContent = reader.name;
-            playerSubtitle.textContent = reader.category || 'تشغيل مباشر';
-            errorMsgDiv.style.display = 'none';
-            audio.src = reader.radio_url;
-            // لا حاجة لـ audio.load() لأن تعيين src يعيد التحميل
-            audio.play().then(() => {
-                isPlaying = true;
-                playIcon.className = 'fas fa-pause';
-                // تخزين معرف القارئ فقط
-                localStorage.setItem('lastReaderId', reader.id);
-                localStorage.setItem('lastReaderName', reader.name);
-                localStorage.setItem('lastReaderCategory', reader.category);
-            }).catch(e => {
-                console.error('Play failed:', e);
-                errorMsgDiv.textContent = 'تعذر تشغيل الإذاعة. الرابط غير متاح.';
-                errorMsgDiv.style.display = 'block';
-                isPlaying = false;
-                playIcon.className = 'fas fa-play';
-                if (card) card.classList.remove('active');
-                currentReader = null;
-            });
-        }
-
-        playBtn.onclick = function() {
-            if (!currentReader || !audio) {
-                const lastId = localStorage.getItem('lastReaderId');
-                if (lastId) {
-                    const reader = finalList.find(r => r.id === lastId);
-                    if (reader) {
-                        const cards = document.querySelectorAll('.reader-card');
-                        let foundCard = null;
-                        cards.forEach(c => {
-                            if (c.getAttribute('data-id') === reader.id) foundCard = c;
-                        });
-                        playReader(reader, foundCard);
-                    }
-                }
-                return;
-            }
-            if (isPlaying) {
-                audio.pause();
-                userStopped = true;
-            } else {
-                userStopped = false;
-                audio.play().catch(e => {
-                    errorMsgDiv.textContent = 'تعذر التشغيل. حاول مرة أخرى.';
-                    errorMsgDiv.style.display = 'block';
-                });
-            }
-        };
-
-        let searchTimeout;
-        searchInput.addEventListener('input', function() {
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(() => {
-                const term = normalizeArabic(this.value);
-                const filtered = finalList.filter(r => normalizeArabic(r.name).includes(term));
-                renderReaders(filtered);
-            }, 300);
-        });
-
-        themeToggle.onclick = function() {
-            document.body.classList.toggle('dark-mode');
-            const icon = themeToggle.querySelector('i');
-            if (document.body.classList.contains('dark-mode')) {
-                icon.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                icon.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'light');
-            }
-        };
-
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeToggle.querySelector('i').className = 'fas fa-sun';
-        }
-
-        const lastId = localStorage.getItem('lastReaderId');
-        if (lastId) {
-            const reader = finalList.find(r => r.id === lastId);
-            if (reader) {
-                playerTitle.textContent = reader.name;
-                playerSubtitle.textContent = reader.category || 'تشغيل مباشر';
-                currentReader = reader;
-            }
-        }
-
-        document.addEventListener('visibilitychange', function() {
-            if (!document.hidden && currentReader && isPlaying && !userStopped && audio && audio.paused) {
-                audio.play().catch(() => {
-                    if (currentReader) {
-                        audio.src = currentReader.radio_url;
-                        audio.play().catch(() => {
-                            isPlaying = false;
-                            playIcon.className = 'fas fa-play';
-                        });
-                    }
-                });
-            }
-        });
-
-        renderReaders(finalList);
-    })();
-})();
-</script>
