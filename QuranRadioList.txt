@@ -1,0 +1,623 @@
+ <script>
+        (function() {
+            // ============================================================
+            // 1. القائمة الأساسية (BASE_RADIOS) - كما هي بدون تعديل
+            // ============================================================
+            const BASE_RADIOS = [
+                { id: "adhan_nasr", name: "أذان نصر الدين طوبار", radio_url: "/assets/aduio/adhan.mp3", category: "أذان" },
+                { id: "125", name: "إذاعة القرآن الكريم من القاهرة", radio_url: "https://stream.radiojar.com/8s5u5tpdtwzuv", category: "إذاعات" },
+                { id: "6", name: "الإذاعة العامة - اذاعة متنوعة لمختلف القراء", radio_url: "https://qurango.net/radio/mix", category: "منوعات" },
+                { id: "125", name: "محمود خليل الحصري", radio_url: "https://qurango.net/radio/mahmoud_khalil_alhussary", category: "قراء" },
+                { id: "127", name: "محمود خليل الحصري مجود", radio_url: "https://qurango.net/radio/mahmoud_khalil_alhussary_mojawwad", category: "قراء" },
+                { id: "126", name: "عبد الباسط عبد الصمد", radio_url: "https://qurango.net/radio/abdulbasit_abdulsamad", category: "قراء" },
+                { id: "127", name: "عبد الباسط عبدالصمد مجود", radio_url: "https://qurango.net/radio/abdulbasit_abdulsamad_mojawwad", category: "قراء" },
+                { id: "127", name: "محمد صديق المنشاوي", radio_url: "https://qurango.net/radio/mohammed_siddiq_alminshawi", category: "قراء" },
+                { id: "127", name: "محمد صديق المنشاوي مجود", radio_url: "https://qurango.net/radio/mohammed_siddiq_alminshawi_mojawwad", category: "قراء" },
+                { id: "128", name: "محمود علي البنا", radio_url: "https://qurango.net/radio/mahmoud_ali__albanna", category: "قراء" },
+                { id: "128", name: "محمود علي البنا مجود", radio_url: "https://qurango.net/radio/mahmoud_ali__albanna_mojawwad", category: "قراء" },
+                { id: "127", name: "مصطفي إسماعيل", radio_url: "https://qurango.net/radio/mustafa_ismail", category: "قراء" },
+                { id: "170", name: "إذاعة الإمام الحويني رحمه الله", radio_url: "https://radio.alhuwayni.com/listen/test/radio.mp3", category: "دروس" },
+                { id: "1", name: "إذاعة صور من حياة الصحابة رضوان الله عليهم", radio_url: "https://qurango.net/radio/sahabah", category: "دروس" },
+                { id: "2", name: "تراتيل قصيرة متميزة", radio_url: "https://qurango.net/radio/tarateel", category: "منوعات" },
+                { id: "3", name: "إذاعة آيات السكينة", radio_url: "https://qurango.net/radio/sakeenah", category: "منوعات" },
+                { id: "155", name: "إذاعة القرآن الكريم من المملكة العربية السعودية", radio_url: "https://stream.radiojar.com/0tpy1h0kxtzuv", category: "إذاعات" },
+                { id: "156", name: "إذاعة الحرم المكي", radio_url: "http://r7.tarat.com:8004/stream?type=http&nocache=114", category: "إذاعات" },
+                { id: "157", name: "إذاعة فتاوى الشيخ ابن عثيمين", radio_url: "https://serverkw.quran-uni.com:8254/;*.mp3", category: "فتاوى" },
+                { id: "158", name: "إذاعة التجويد (غاية المريد في علم التجويد)", radio_url: "https://serverkw.quran-uni.com:8248/;*.mp3", category: "تجويد" },
+                { id: "158", name: "إذاعة فتاوى الشيخ متولي الشعراوي", radio_url: "https://serverkw.quran-uni.com:8202/;*.mp3", category: "فتاوى" },
+                { id: "158", name: "إذاعة تفسير الشيخ السعدي", radio_url: "https://serverkw.quran-uni.com:8012/;*.mp3", category: "تفسير" },
+                { id: "4", name: "تفسير القرآن الكريم", radio_url: "https://qurango.net/radio/tafseer", category: "تفسير" },
+                { id: "5", name: "سورة البقرة لعدد من القراء", radio_url: "https://qurango.net/radio/albaqarah", category: "منوعات" },
+                { id: "7", name: "تلاوات خاشعة", radio_url: "https://qurango.net/radio/salma", category: "منوعات" },
+                { id: "8", name: "أحمد الحواشي", radio_url: "https://qurango.net/radio/ahmad_alhawashi", category: "قراء" },
+                { id: "9", name: "أحمد الطرابلسي", radio_url: "https://qurango.net/radio/ahmed_altrabulsi", category: "قراء" },
+                { id: "10", name: "أحمد الطرابلسي رواية قالون عن نافع", radio_url: "https://qurango.net/radio/ahmad_khader_altarabulsi", category: "روايات" },
+                { id: "11", name: "أحمد بن علي العجمي", radio_url: "https://qurango.net/radio/ahmad_alajmy", category: "قراء" },
+                { id: "12", name: "أحمد خليل شاهين", radio_url: "https://qurango.net/radio/ahmad_shaheen", category: "قراء" },
+                { id: "13", name: "أحمد ديبان", radio_url: "https://qurango.net/radio/ahmad_deban", category: "قراء" },
+                { id: "14", name: "أحمد صابر", radio_url: "https://qurango.net/radio/ahmad_saber", category: "قراء" },
+                { id: "15", name: "أحمد عامر", radio_url: "https://qurango.net/radio/ahmed_amer", category: "قراء" },
+                { id: "16", name: "أحمد نعينع", radio_url: "https://qurango.net/radio/ahmad_nauina", category: "قراء" },
+                { id: "17", name: "أذكار الصباح", radio_url: "https://qurango.net/radio/athkar_sabah", category: "أذكار" },
+                { id: "18", name: "أذكار المساء", radio_url: "https://qurango.net/radio/athkar_masa", category: "أذكار" },
+                { id: "19", name: "أكرم العلاقمي", radio_url: "https://qurango.net/radio/akram_alalaqmi", category: "قراء" },
+                { id: "20", name: "إبراهيم الأخضر", radio_url: "https://qurango.net/radio/ibrahim_alakdar", category: "قراء" },
+                { id: "21", name: "إدريس أبكر", radio_url: "https://qurango.net/radio/idrees_abkr", category: "قراء" },
+                { id: "22", name: "ابراهيم الدوسري رواية ورش عن نافع", radio_url: "https://qurango.net/radio/ibrahim_aldosari", category: "روايات" },
+                { id: "23", name: "الدوكالي محمد العالم رواية قالون عن نافع", radio_url: "https://qurango.net/radio/addokali_mohammad_alalim", category: "روايات" },
+                { id: "24", name: "الرقية الشرعية", radio_url: "https://qurango.net/radio/roqiah", category: "رقية" },
+                { id: "25", name: "الزين محمد أحمد", radio_url: "https://qurango.net/radio/alzain_mohammad_ahmad", category: "قراء" },
+                { id: "26", name: "العيون الكوشي رواية ورش عن نافع", radio_url: "https://qurango.net/radio/aloyoon_alkoshi", category: "روايات" },
+                { id: "27", name: "الفاتح محمد الزبير رواية الدوري عن أبي عمرو", radio_url: "https://qurango.net/radio/alfateh_alzubair", category: "روايات" },
+                { id: "28", name: "الفتاوى", radio_url: "https://qurango.net/radio/fatwa", category: "فتاوى" },
+                { id: "29", name: "القارئ ياسين رواية ورش عن نافع", radio_url: "https://qurango.net/radio/alqaria_yassen", category: "روايات" },
+                { id: "30", name: "المختصر في السيرة النبوية", radio_url: "https://qurango.net/radio/almukhtasar_fi_alsiyra", category: "سيرة" },
+                { id: "31", name: "المختصر في تفسير القرآن الكريم", radio_url: "https://qurango.net/radio/mukhtasartafsir", category: "تفسير" },
+                { id: "32", name: "بندر بليله", radio_url: "https://qurango.net/radio/bandar_balilah", category: "قراء" },
+                { id: "33", name: "ترجمة معاني القرآن الكريم باللغة الأوردية", radio_url: "https://qurango.net/radio/translation_quran_urdu_basit", category: "ترجمة" },
+                { id: "34", name: "ترجمة معاني القرآن باللغة الأسبانية", radio_url: "https://qurango.net/radio/translation_quran_spanish_afs", category: "ترجمة" },
+                { id: "35", name: "ترجمة معاني القرآن باللغة الألبانية", radio_url: "https://qurango.net/radio/translation_quran_albanian", category: "ترجمة" },
+                { id: "36", name: "ترجمة معاني القرآن باللغة الألمانية", radio_url: "https://qurango.net/radio/translation_quran_german", category: "ترجمة" },
+                { id: "37", name: "ترجمة معاني القرآن باللغة الأمازيغية", radio_url: "https://qurango.net/radio/translation_quran_tamazight", category: "ترجمة" },
+                { id: "38", name: "ترجمة معاني القرآن باللغة الأوردية (السديس والشريم)", radio_url: "https://qurango.net/radio/translation_quran_urdu_sds_shur", category: "ترجمة" },
+                { id: "39", name: "ترجمة معاني القرآن باللغة الأوردية (المنشاوي)", radio_url: "https://qurango.net/radio/translation_quran_urdu_minsh", category: "ترجمة" },
+                { id: "40", name: "ترجمة معاني القرآن باللغة الإنجليزية (عبدالباسط)", radio_url: "https://qurango.net/radio/translation_quran_english_basit", category: "ترجمة" },
+                { id: "41", name: "ترجمة معاني القرآن باللغة الإنجليزية (عبدالله صفر)", radio_url: "https://qurango.net/radio/translation_quran_english_bsfr", category: "ترجمة" },
+                { id: "42", name: "ترجمة معاني القرآن باللغة الإنجليزية (والك)", radio_url: "https://qurango.net/radio/translation_quran_english_walk_basit", category: "ترجمة" },
+                { id: "43", name: "ترجمة معاني القرآن باللغة البرتغالية", radio_url: "https://qurango.net/radio/translation_quran_portuguese", category: "ترجمة" },
+                { id: "44", name: "ترجمة معاني القرآن باللغة البوسنية", radio_url: "https://qurango.net/radio/translation_quran_bosnia", category: "ترجمة" },
+                { id: "45", name: "ترجمة معاني القرآن باللغة التركية", radio_url: "https://qurango.net/radio/translation_quran_turkish", category: "ترجمة" },
+                { id: "46", name: "ترجمة معاني القرآن باللغة الصينية", radio_url: "https://qurango.net/radio/translation_quran_chinese", category: "ترجمة" },
+                { id: "47", name: "ترجمة معاني القرآن باللغة الفارسية", radio_url: "https://qurango.net/radio/translation_quran_farsi", category: "ترجمة" },
+                { id: "48", name: "ترجمة معاني القرآن باللغة الفرنسية", radio_url: "https://qurango.net/radio/translation_quran_french", category: "ترجمة" },
+                { id: "49", name: "ترجمة معاني القرآن باللغة الكردية", radio_url: "https://qurango.net/radio/translation_quran_kurdish", category: "ترجمة" },
+                { id: "50", name: "ترجمة معاني القرآن باللغة المجرية", radio_url: "https://qurango.net/radio/translation_quran_hungarian", category: "ترجمة" },
+                { id: "51", name: "ترجمة معاني القرآن باللغة اليونانية", radio_url: "https://qurango.net/radio/translation_quran_greek", category: "ترجمة" },
+                { id: "52", name: "تكبيرات العيد", radio_url: "https://qurango.net/radio/eid", category: "منوعات" },
+                { id: "53", name: "توفيق الصايغ", radio_url: "https://qurango.net/radio/tawfeeq_assayegh", category: "قراء" },
+                { id: "54", name: "جمال شاكر عبدالله", radio_url: "https://qurango.net/radio/jamal_shaker_abdullah", category: "قراء" },
+                { id: "55", name: "جمعان العصيمي", radio_url: "https://qurango.net/radio/jamaan_alosaimi", category: "قراء" },
+                { id: "56", name: "حاتم فريد الواعر", radio_url: "https://qurango.net/radio/hatem_fareed_alwaer", category: "قراء" },
+                { id: "57", name: "خالد الجليل", radio_url: "https://qurango.net/radio/khalid_aljileel", category: "قراء" },
+                { id: "58", name: "خالد القحطاني", radio_url: "https://qurango.net/radio/khaled_alqahtani", category: "قراء" },
+                { id: "59", name: "خالد المهنا", radio_url: "https://qurango.net/radio/khalid_almohana", category: "قراء" },
+                { id: "60", name: "خالد عبدالكافي", radio_url: "https://qurango.net/radio/khalid_abdulkafi", category: "قراء" },
+                { id: "61", name: "خليفة الطنيجي", radio_url: "https://qurango.net/radio/khalifa_altunaiji", category: "قراء" },
+                { id: "62", name: "زكي داغستاني", radio_url: "https://qurango.net/radio/zaki_daghistani", category: "قراء" },
+                { id: "63", name: "سعد الغامدي", radio_url: "https://qurango.net/radio/saad_alghamdi", category: "قراء" },
+                { id: "64", name: "سعود الشريم", radio_url: "https://qurango.net/radio/saud_alshuraim", category: "قراء" },
+                { id: "65", name: "سهل ياسين", radio_url: "https://qurango.net/radio/sahl_yassin", category: "قراء" },
+                { id: "66", name: "سيد رمضان", radio_url: "https://qurango.net/radio/sayeed_ramadan", category: "قراء" },
+                { id: "67", name: "شيخ أبو بكر الشاطري", radio_url: "https://qurango.net/radio/shaik_abu_bakr_al_shatri", category: "قراء" },
+                { id: "68", name: "شيرزاد عبدالرحمن طاهر", radio_url: "https://qurango.net/radio/shirazad_taher", category: "قراء" },
+                { id: "69", name: "صابر عبدالحكم", radio_url: "https://qurango.net/radio/saber_abdulhakm", category: "قراء" },
+                { id: "70", name: "صلاح البدير", radio_url: "https://qurango.net/radio/salah_albudair", category: "قراء" },
+                { id: "71", name: "صلاح الهاشم", radio_url: "https://qurango.net/radio/salah_alhashim", category: "قراء" },
+                { id: "72", name: "صلاح بو خاطر", radio_url: "https://qurango.net/radio/slaah_bukhatir", category: "قراء" },
+                { id: "73", name: "طارق دعوب رواية قالون عن نافع", radio_url: "https://qurango.net/radio/tareq_abdulgani_daawob", category: "روايات" },
+                { id: "74", name: "عادل الكلباني", radio_url: "https://qurango.net/radio/adel_alkhalbany", category: "قراء" },
+                { id: "75", name: "عادل ريان", radio_url: "https://qurango.net/radio/adel_ryyan", category: "قراء" },
+                { id: "76", name: "عبدالبارئ الثبيتي", radio_url: "https://qurango.net/radio/abdelbari_altoubayti", category: "قراء" },
+                { id: "77", name: "عبدالبارئ محمد", radio_url: "https://qurango.net/radio/abdulbari_mohammad", category: "قراء" },
+                { id: "80", name: "عبدالباسط عبدالصمد رواية ورش عن نافع", radio_url: "https://qurango.net/radio/abdulbasit_abdulsamad_warsh", category: "روايات" },
+                { id: "81", name: "عبدالرحمن السديس", radio_url: "https://qurango.net/radio/abdulrahman_alsudaes", category: "قراء" },
+                { id: "82", name: "عبدالرحمن الماجد", radio_url: "https://qurango.net/radio/abdulrahman_almajed", category: "قراء" },
+                { id: "83", name: "عبدالرشيد صوفي رواية السوسي عن أبي عمرو", radio_url: "https://qurango.net/radio/abdulrasheed_soufi_assosi", category: "روايات" },
+                { id: "84", name: "عبدالرشيد صوفي رواية خلف عن حمزة", radio_url: "https://qurango.net/radio/abdulrasheed_soufi_khalaf", category: "روايات" },
+                { id: "85", name: "عبدالعزيز الأحمد", radio_url: "https://qurango.net/radio/abdul_aziz_alahmad", category: "قراء" },
+                { id: "86", name: "عبدالله الخلف", radio_url: "https://qurango.net/radio/abdullah_alkhalaf", category: "قراء" },
+                { id: "87", name: "عبدالله الكندري", radio_url: "https://qurango.net/radio/abdullah_alkandari", category: "قراء" },
+                { id: "88", name: "عبدالله المطرود", radio_url: "https://qurango.net/radio/abdullah_almattrod", category: "قراء" },
+                { id: "89", name: "عبدالله الموسى", radio_url: "https://qurango.net/radio/abdullah_almousa", category: "قراء" },
+                { id: "90", name: "عبدالله بصفر", radio_url: "https://qurango.net/radio/abdullah_basfer", category: "قراء" },
+                { id: "91", name: "عبدالله خياط", radio_url: "https://qurango.net/radio/abdullah_khayyat", category: "قراء" },
+                { id: "92", name: "عبدالله عواد الجهني", radio_url: "https://qurango.net/radio/abdullah_aljohany", category: "قراء" },
+                { id: "93", name: "عبدالمحسن الحارثي", radio_url: "https://qurango.net/radio/abdulmohsin_alharthy", category: "قراء" },
+                { id: "94", name: "عبدالمحسن العبيكان", radio_url: "https://qurango.net/radio/abdulmohsin_alobaikan", category: "قراء" },
+                { id: "95", name: "عبدالمحسن القاسم", radio_url: "https://qurango.net/radio/abdulmohsen_alqasim", category: "قراء" },
+                { id: "96", name: "عبدالهادي أحمد كناكري", radio_url: "https://qurango.net/radio/abdulhadi_kanakeri", category: "قراء" },
+                { id: "97", name: "عبدالودود حنيف", radio_url: "https://qurango.net/radio/abdulwadood_haneef", category: "قراء" },
+                { id: "98", name: "علي الحذيفي", radio_url: "https://qurango.net/radio/ali_alhuthaifi", category: "قراء" },
+                { id: "99", name: "علي جابر", radio_url: "https://qurango.net/radio/ali_jaber", category: "قراء" },
+                { id: "100", name: "علي حجاج السويسي", radio_url: "https://qurango.net/radio/ali_hajjaj_alsouasi", category: "قراء" },
+                { id: "101", name: "عماد زهير حافظ", radio_url: "https://qurango.net/radio/emad_hafez", category: "قراء" },
+                { id: "102", name: "عمر القزابري رواية ورش عن نافع", radio_url: "https://qurango.net/radio/omar_alqazabri", category: "روايات" },
+                { id: "103", name: "فارس عباد", radio_url: "https://qurango.net/radio/fares_abbad", category: "قراء" },
+                { id: "104", name: "في ظلال السيرة النبوية", radio_url: "https://qurango.net/radio/fi_zilal_alsiyra", category: "سيرة" },
+                { id: "105", name: "الاختيارات الفقهية - ابن باز", radio_url: "https://qurango.net/radio/alaikhtiarat_alfiqhayh_bin_baz", category: "فتاوى" },
+                { id: "106", name: "ماجد الزامل", radio_url: "https://qurango.net/radio/majed_alzamel", category: "قراء" },
+                { id: "107", name: "ماهر المعيقلي", radio_url: "https://qurango.net/radio/maher_al_meaqli", category: "قراء" },
+                { id: "108", name: "ماهر شخاشيرو", radio_url: "https://qurango.net/radio/maher_shakhashero", category: "قراء" },
+                { id: "109", name: "محمد أيوب (1)", radio_url: "https://qurango.net/radio/mohammed_ayyub", category: "قراء" },
+                { id: "110", name: "محمد أيوب (2)", radio_url: "https://qurango.net/radio/ayyoub2", category: "قراء" },
+                { id: "111", name: "محمد الطبلاوي", radio_url: "https://qurango.net/radio/mohammad_altablaway", category: "قراء" },
+                { id: "112", name: "محمد اللحيدان", radio_url: "https://qurango.net/radio/mohammed_allohaidan", category: "قراء" },
+                { id: "113", name: "محمد جبريل", radio_url: "https://qurango.net/radio/mohammed_jibreel", category: "قراء" },
+                { id: "114", name: "محمد رشاد الشريف", radio_url: "https://qurango.net/radio/mohammad_rashad_alshareef", category: "قراء" },
+                { id: "115", name: "محمد صالح عالم شاه", radio_url: "https://qurango.net/radio/mohammad_saleh_alim_shah", category: "قراء" },
+                { id: "118", name: "محمد عبدالحكيم العبدالله (البزي وقنبل)", radio_url: "https://qurango.net/radio/mohammad_alabdullah_albizi", category: "روايات" },
+                { id: "119", name: "محمد عبدالحكيم العبدالله (الدوري)", radio_url: "https://qurango.net/radio/mohammad_alabdullah_aldorai", category: "روايات" },
+                { id: "120", name: "محمد عبدالكريم", radio_url: "https://qurango.net/radio/mohammad_abdullkarem", category: "قراء" },
+                { id: "121", name: "محمد عبدالكريم (ورش)", radio_url: "https://qurango.net/radio/mohammad_abdullkarem_alasbahani", category: "روايات" },
+                { id: "122", name: "محمد عثمان خان", radio_url: "https://qurango.net/radio/mohammed_osman_khan", category: "قراء" },
+                { id: "123", name: "محمود الرفاعي", radio_url: "https://qurango.net/radio/mahmood_al_rifai", category: "قراء" },
+                { id: "124", name: "محمود الشيمي (الدوري)", radio_url: "https://qurango.net/radio/mahmood_alsheimy", category: "روايات" },
+                { id: "130", name: "مشاري العفاسي", radio_url: "https://qurango.net/radio/mishary_alafasi", category: "قراء" },
+                { id: "131", name: "مصطفى إسماعيل", radio_url: "https://qurango.net/radio/mustafa_ismail", category: "قراء" },
+                { id: "132", name: "مصطفى اللاهوني", radio_url: "https://qurango.net/radio/mustafa_allahoni", category: "قراء" },
+                { id: "133", name: "مصطفى رعد العزاوي", radio_url: "https://qurango.net/radio/mustafa_raad_alazawy", category: "قراء" },
+                { id: "134", name: "معيض الحارثي", radio_url: "https://qurango.net/radio/moeedh_alharthi", category: "قراء" },
+                { id: "135", name: "التفسير الميسر (محمد أيوب)", radio_url: "https://serverkw.quran-uni.com:8086/;*.mp3", category: "تفسير" },
+                { id: "136", name: "مفتاح السلطني (ابن ذكوان)", radio_url: "https://qurango.net/radio/muftah_alsaltany_ibn_thakwan_an_ibn_amr", category: "روايات" },
+                { id: "137", name: "مفتاح السلطني (الدوري عن أبي عمرو)", radio_url: "https://qurango.net/radio/muftah_alsaltany_aldori_an_abi_amr", category: "روايات" },
+                { id: "138", name: "مفتاح السلطني (الدوري عن الكسائي)", radio_url: "https://qurango.net/radio/muftah_alsaltany_aldorai", category: "روايات" },
+                { id: "139", name: "موسى بلال", radio_url: "https://qurango.net/radio/mousa_bilal", category: "قراء" },
+                { id: "140", name: "ناصر العصفور", radio_url: "https://qurango.net/radio/nasser_alosfor", category: "قراء" },
+                { id: "141", name: "ناصر القطامي", radio_url: "https://qurango.net/radio/nasser_alqatami", category: "قراء" },
+                { id: "142", name: "ناصر الماجد", radio_url: "https://qurango.net/radio/nasser_almajed", category: "قراء" },
+                { id: "143", name: "نبيل الرفاعي", radio_url: "https://qurango.net/radio/nabil_al_rifay", category: "قراء" },
+                { id: "144", name: "نعمة الحسان", radio_url: "https://qurango.net/radio/neamah_alhassan", category: "قراء" },
+                { id: "145", name: "هاني الرفاعي", radio_url: "https://qurango.net/radio/hani_arrifai", category: "قراء" },
+                { id: "146", name: "هيثم الجدعاني", radio_url: "https://qurango.net/radio/hitham_aljadani", category: "قراء" },
+                { id: "147", name: "وليد النائحي (قالون)", radio_url: "https://qurango.net/radio/waleed_alnaehi", category: "روايات" },
+                { id: "148", name: "ياسر الدوسري", radio_url: "https://qurango.net/radio/yasser_aldosari", category: "قراء" },
+                { id: "149", name: "ياسر القرشي", radio_url: "https://qurango.net/radio/yasser_alqurashi", category: "قراء" },
+                { id: "150", name: "ياسر المزروعي (يعقوب الحضرمي)", radio_url: "https://qurango.net/radio/yasser_almazroyee", category: "روايات" },
+                { id: "151", name: "يحيى حوا", radio_url: "https://qurango.net/radio/yahya_hawwa", category: "قراء" },
+                { id: "152", name: "يوسف الشويعي", radio_url: "https://qurango.net/radio/yousef_alshoaey", category: "قراء" },
+                { id: "153", name: "يوسف بن نوح أحمد", radio_url: "https://qurango.net/radio/yousef_bin_noah_ahmad", category: "قراء" }
+            ];
+
+            // ============================================================
+            // 2. تحويل الرابط إلى اسم عربي (للقائمة الجديدة)
+            // ============================================================
+            function urlToArabicName(url) {
+                let slug = url.split('/').pop();
+                let name = slug.replace(/_/g, ' ');
+                const mapping = {
+                    'ahmed': 'أحمد', 'ahmad': 'أحمد', 'mohammed': 'محمد', 'mohammad': 'محمد',
+                    'ali': 'علي', 'ibrahim': 'إبراهيم', 'khalid': 'خالد', 'khaled': 'خالد',
+                    'abdul': 'عبد', 'abdullah': 'عبدالله', 'abdulrahman': 'عبدالرحمن', 'abdulbasit': 'عبدالباسط',
+                    'abdulsamad': 'عبدالصمد', 'al': 'ال', 'bin': 'بن', 'abu': 'أبو', 'bakr': 'بكر',
+                    'soufi': 'صوفي', 'hussary': 'الحصري', 'minshawi': 'المنشاوي', 'alafasi': 'العفاسي',
+                    'sudaes': 'السديس', 'shuraim': 'الشريم', 'dosari': 'الدوسري', 'qatami': 'القطامي',
+                    'maher': 'ماهر', 'yasser': 'ياسر', 'ayyoub': 'أيوب', 'mustafa': 'مصطفى',
+                    'jaber': 'جابر', 'bukhatir': 'بو خاطر', 'alajmy': 'العجمي', 'alghamdi': 'الغامدي',
+                    'mishary': 'مشاري', 'tablawi': 'الطبلاوي', 'banna': 'البنا', 'rifai': 'الرفاعي',
+                    'arifai': 'الرفاعي', 'hani': 'هاني', 'nabil': 'نبيل', 'nasser': 'ناصر',
+                    'saad': 'سعد', 'salah': 'صلاح', 'tareq': 'طارق', 'adel': 'عادل',
+                    'emad': 'عماد', 'fares': 'فارس', 'majed': 'ماجد', 'moeedh': 'معيض',
+                    'muftah': 'مفتاح', 'mousa': 'موسى', 'yousef': 'يوسف', 'yahya': 'يحيى',
+                    'sahl': 'سهل', 'sayeed': 'سيد', 'ramadan': 'رمضان', 'shirazad': 'شيرزاد',
+                    'saber': 'صابر', 'zaki': 'زكي', 'daghistani': 'داغستاني', 'jamaan': 'جمعان',
+                    'osaimi': 'العصيمي', 'hatem': 'حاتم', 'fareed': 'فريد', 'alwaer': 'الواعظ',
+                    'mohana': 'المهنا', 'abdulgani': 'عبدالجني', 'daawob': 'دعوب', 'alkhalbany': 'الكلباني',
+                    'almajed': 'الماجد', 'kandari': 'الكندري', 'hajjaj': 'حجاج', 'alsouasi': 'السويسي',
+                    'hafez': 'حافظ', 'qazabri': 'القزابري', 'abbad': 'عباد', 'shakhashero': 'شخاشيرو',
+                    'allaohaidan': 'اللحيدان', 'jibreel': 'جبريل', 'rashad': 'رشاد', 'alshareef': 'الشريف',
+                    'saleh': 'صالح', 'alim': 'عالم', 'shah': 'شاه', 'abdullkarem': 'عبدالكريم',
+                    'alasbahani': 'الأصبهاني', 'osman': 'عثمان', 'khan': 'خان', 'shimy': 'الشيمي',
+                    'allahoni': 'اللاهوني', 'raad': 'رعد', 'alazawy': 'العزاوي', 'harthi': 'الحارثي',
+                    'aldori': 'الدوري', 'amr': 'عمرو', 'thakwan': 'ذكوان', 'bilal': 'بلال',
+                    'neamah': 'نعمة', 'hassan': 'حسان', 'naehi': 'النائحي', 'qurashi': 'القرشي',
+                    'mazroyee': 'المزروعي', 'hawwa': 'حوا', 'shoaey': 'الشويعي', 'tarateel': 'تراتيل قصيرة',
+                    'sahabah': 'صور من حياة الصحابة', 'mix': 'إذاعة متنوعة', 'mukhtasartafsir': 'المختصر في التفسير',
+                    'deban': 'ديبان', 'athkar': 'أذكار', 'sabah': 'الصباح', 'masa': 'المساء',
+                    'albaqarah': 'سورة البقرة', 'tafseer': 'تفسير القرآن', 'salma': 'تلاوات خاشعة',
+                    'sakeenah': 'آيات السكينة', 'hawashi': 'الحواشي', 'shaheen': 'شاهين', 'saber': 'صابر',
+                    'nauina': 'نعينع', 'alaqmi': 'العلاقمي', 'alakdar': 'الأخضر', 'abkr': 'أبكر',
+                    'roqiah': 'الرقية الشرعية', 'zain': 'الزين', 'oyoon': 'العيون', 'koshi': 'الكوشي',
+                    'fatwa': 'الفتاوى', 'yassen': 'ياسين', 'eid': 'تكبيرات العيد', 'assayegh': 'الصايغ',
+                    'jamal': 'جمال', 'shaker': 'شاكر', 'jileel': 'الجليل', 'qahtani': 'القحطاني',
+                    'abdulkafi': 'عبدالكافي', 'tunaiji': 'الطنيجي', 'ghamdi': 'الغامدي', 'yassin': 'ياسين',
+                    'shatri': 'الشاطري', 'taher': 'طاهر', 'abdulhakm': 'عبدالحكم', 'budair': 'البدير',
+                    'hashim': 'الهاشم', 'ryyan': 'ريان', 'thubaiti': 'الثبيتي', 'bari': 'البارئ',
+                    'rasheed': 'الرشيد', 'aziz': 'العزيز', 'khalaf': 'خلف', 'assosi': 'السوسي',
+                    'matroud': 'المطرود', 'basfar': 'بصفر', 'khayyat': 'خياط', 'johany': 'الجهني',
+                    'mohsin': 'محسن', 'obaikan': 'العبيكان', 'qasim': 'القاسم', 'kanakeri': 'كناكري',
+                    'wadood': 'الودود', 'haneef': 'حنيف', 'huthaifi': 'الحذيفي', 'zamil': 'الزامل',
+                    'meaqli': 'المعيقلي', 'sneineh': 'السنينة', 'qeniwa': 'قنيوة', 'alosfor': 'العصفور'
+                };
+                let words = name.split(' ');
+                let translated = words.map(w => mapping[w.toLowerCase()] || w).join(' ');
+                translated = translated.replace(/عبد ال/g, 'عبد ال');
+                return translated.charAt(0).toUpperCase() + translated.slice(1);
+            }
+
+            // ============================================================
+            // 3. القائمة الجديدة من الروابط (QuranRadioList)
+            // ============================================================
+            const QuranRadioList = [
+                "https://Qurango.net/radio/ahmed_altrabulsi", "https://Qurango.net/radio/ahmad_khader_altarabulsi",
+                "https://Qurango.net/radio/ahmed_amer", "https://Qurango.net/radio/ibrahim_aldosari",
+                "https://Qurango.net/radio/addokali_mohammad_alalim", "https://Qurango.net/radio/alfateh_alzubair",
+                "https://Qurango.net/radio/jamaan_alosaimi", "https://Qurango.net/radio/hatem_fareed_alwaer",
+                "https://Qurango.net/radio/khalid_almohana", "https://Qurango.net/radio/tareq_abdulgani_daawob",
+                "https://Qurango.net/radio/adel_alkhalbany", "https://Qurango.net/radio/abdulrahman_almajed",
+                "https://Qurango.net/radio/abdullah_alkandari", "https://Qurango.net/radio/ali_jaber",
+                "https://Qurango.net/radio/ali_hajjaj_alsouasi", "https://Qurango.net/radio/emad_hafez",
+                "https://Qurango.net/radio/omar_alqazabri", "https://Qurango.net/radio/fares_abbad",
+                "https://Qurango.net/radio/maher_al_meaqli", "https://Qurango.net/radio/maher_shakhashero",
+                "https://Qurango.net/radio/mohammed_ayyub", "https://Qurango.net/radio/mohammad_altablaway",
+                "https://Qurango.net/radio/mohammed_allohaidan", "https://Qurango.net/radio/mohammed_jibreel",
+                "https://Qurango.net/radio/mohammad_rashad_alshareef", "https://Qurango.net/radio/mohammad_saleh_alim_shah",
+                "https://Qurango.net/radio/mohammed_siddiq_alminshawi", "https://Qurango.net/radio/mohammed_siddiq_alminshawi_mojawwad",
+                "https://Qurango.net/radio/mohammad_alabdullah_albizi", "https://Qurango.net/radio/mohammad_alabdullah_aldorai",
+                "https://Qurango.net/radio/mohammad_abdullkarem", "https://Qurango.net/radio/mohammad_abdullkarem_alasbahani",
+                "https://Qurango.net/radio/mahmood_al_rifai", "https://Qurango.net/radio/mahmood_alsheimy",
+                "https://Qurango.net/radio/mahmoud_khalil_alhussary", "https://Qurango.net/radio/mahmoud_khalil_alhussary_mojawwad",
+                "https://Qurango.net/radio/mahmoud_khalil_alhussary_warsh", "https://Qurango.net/radio/mahmoud_ali__albanna",
+                "https://Qurango.net/radio/mahmoud_ali__albanna_mojawwad", "https://Qurango.net/radio/mishary_alafasi",
+                "https://Qurango.net/radio/mustafa_ismail", "https://Qurango.net/radio/mustafa_allahoni",
+                "https://Qurango.net/radio/mustafa_raad_alazawy", "https://Qurango.net/radio/moeedh_alharthi",
+                "https://Qurango.net/radio/muftah_alsaltany_aldori_an_abi_amr", "https://Qurango.net/radio/muftah_alsaltany_aldorai",
+                "https://Qurango.net/radio/muftah_alsaltany", "https://Qurango.net/radio/muftah_alsaltany_ibn_thakwan_an_ibn_amr",
+                "https://Qurango.net/radio/mousa_bilal", "https://Qurango.net/radio/nasser_alqatami",
+                "https://Qurango.net/radio/nabil_al_rifay", "https://Qurango.net/radio/neamah_alhassan",
+                "https://Qurango.net/radio/hani_arrifai", "https://Qurango.net/radio/waleed_alnaehi",
+                "https://Qurango.net/radio/yasser_aldosari", "https://Qurango.net/radio/yasser_alqurashi",
+                "https://Qurango.net/radio/yasser_almazroyee", "https://Qurango.net/radio/yahya_hawwa",
+                "https://Qurango.net/radio/yousef_alshoaey", "https://Qurango.net/radio/yousef_bin_noah_ahmad",
+                "https://Qurango.net/radio/tarateel", "https://qurango.net/radio/sahabah", "https://Qurango.net/radio/mix",
+                "https://qurango.net/radio/mukhtasartafsir", "https://Qurango.net/radio/ahmad_deban",
+                "https://qurango.net/radio/athkar_sabah", "https://qurango.net/radio/athkar_masa",
+                "https://qurango.net/radio/albaqarah", "https://qurango.net/radio/tafseer", "https://qurango.net/radio/salma",
+                "https://qurango.net/radio/sakeenah", "https://Qurango.net/radio/ahmad_alhawashi", "https://Qurango.net/radio/ahmad_alajmy",
+                "https://Qurango.net/radio/ahmad_shaheen", "https://Qurango.net/radio/ahmad_saber", "https://Qurango.net/radio/ahmad_nauina",
+                "https://Qurango.net/radio/akram_alalaqmi", "https://Qurango.net/radio/ibrahim_alakdar", "https://Qurango.net/radio/idrees_abkr",
+                "https://qurango.net/radio/roqiah", "https://Qurango.net/radio/alzain_mohammad_ahmad", "https://Qurango.net/radio/aloyoon_alkoshi",
+                "https://qurango.net/radio/fatwa", "https://Qurango.net/radio/alqaria_yassen", "https://qurango.net/radio/eid",
+                "https://Qurango.net/radio/tawfeeq_assayegh", "https://Qurango.net/radio/jamal_shaker_abdullah", "https://Qurango.net/radio/khalid_aljileel",
+                "https://Qurango.net/radio/khaled_alqahtani", "https://Qurango.net/radio/khalid_abdulkafi", "https://Qurango.net/radio/khalifa_altunaiji",
+                "https://Qurango.net/radio/zaki_daghistani", "https://Qurango.net/radio/saad_alghamdi", "https://Qurango.net/radio/saud_alshuraim",
+                "https://Qurango.net/radio/sahl_yassin", "https://Qurango.net/radio/sayeed_ramadan", "https://Qurango.net/radio/shaik_abu_bakr_al_shatri",
+                "https://Qurango.net/radio/shirazad_taher", "https://Qurango.net/radio/saber_abdulhakm", "https://Qurango.net/radio/salah_albudair",
+                "https://Qurango.net/radio/salah_alhashim", "https://Qurango.net/radio/slaah_bukhatir", "https://Qurango.net/radio/adel_ryyan",
+                "https://Qurango.net/radio/abdelbari_altoubayti", "https://Qurango.net/radio/abdulbari_mohammad", "https://Qurango.net/radio/abdulbasit_abdulsamad_mojawwad",
+                "https://Qurango.net/radio/abdulbasit_abdulsamad_warsh", "https://Qurango.net/radio/abdulbasit_abdulsamad", "https://Qurango.net/radio/abdulrahman_alsudaes",
+                "https://Qurango.net/radio/abdulrasheed_soufi_khalaf", "https://Qurango.net/radio/abdulrasheed_soufi_assosi", "https://Qurango.net/radio/abdul_aziz_alahmad",
+                "https://Qurango.net/radio/abdullah_alkhalaf", "https://Qurango.net/radio/abdullah_almattrod", "https://Qurango.net/radio/abdullah_almousa",
+                "https://Qurango.net/radio/abdullah_basfer", "https://Qurango.net/radio/abdullah_khayyat", "https://Qurango.net/radio/abdullah_aljohany",
+                "https://Qurango.net/radio/abdulmohsin_alharthy", "https://Qurango.net/radio/abdulmohsin_alobaikan", "https://Qurango.net/radio/abdulmohsen_alqasim",
+                "https://Qurango.net/radio/abdulhadi_kanakeri", "https://Qurango.net/radio/abdulwadood_haneef", "https://Qurango.net/radio/ali_alhuthaifi_qalon",
+                "https://Qurango.net/radio/ali_alhuthaifi", "https://qurango.net/radio/ayyoub2", "https://Qurango.net/radio/mohammed_osman_khan",
+                "https://Qurango.net/radio/nasser_almajed", "https://Qurango.net/radio/hitham_aljadani", "https://Qurango.net/radio/bandar_balilah",
+                "https://Qurango.net/radio/fi_zilal_alsiyra", "https://Qurango.net/radio/alaikhtiarat_alfiqhayh_bin_baz", "https://Qurango.net/radio/majed_alzamel",
+                "https://Qurango.net/radio/sneineh", "https://Qurango.net/radio/qeniwa", "https://Qurango.net/radio/nasser_alosfor"
+            ];
+
+            // تحويل الروابط إلى كائنات إذاعة
+            const NEW_RADIOS_FROM_LIST = QuranRadioList.map((url, idx) => {
+                let name = urlToArabicName(url);
+                name = name.replace(/^إذاعة\s+/, '').replace(/^إذاعة/, '');
+                if (name === 'تراتيل قصيرة') name = 'تراتيل قصيرة متميزة';
+                if (name === 'صور من حياة الصحابة') name = 'صور من حياة الصحابة رضوان الله عليهم';
+                if (name === 'إذاعة متنوعة') name = 'إذاعة عامة متنوعة';
+                if (name === 'المختصر في التفسير') name = 'المختصر في تفسير القرآن الكريم';
+                if (name === 'تفسير القرآن') name = 'تفسير القرآن الكريم';
+                if (name === 'آيات السكينة') name = 'إذاعة آيات السكينة';
+                return {
+                    id: `list_${idx}`,
+                    name: name,
+                    radio_url: url,
+                    category: "إذاعات إضافية"
+                };
+            });
+
+            // ============================================================
+            // 4. جلب الإذاعات من API الخارجي
+            // ============================================================
+            async function fetchExternalRadios() {
+                try {
+                    const response = await fetch('https://www.mp3quran.net/api/v3/radios?language=ar');
+                    if (!response.ok) throw new Error('فشل تحميل الإذاعات الخارجية');
+                    const data = await response.json();
+                    let external = [];
+                    if (Array.isArray(data)) external = data;
+                    else if (data.radios && Array.isArray(data.radios)) external = data.radios;
+                    else if (data.data && Array.isArray(data.data)) external = data.data;
+                    return external.map((r, idx) => ({
+                        id: `ext_${idx}`,
+                        name: r.name || r.title || "إذاعة خارجية",
+                        radio_url: r.url || r.stream || "",
+                        category: r.category || "إذاعات عالمية"
+                    })).filter(r => r.radio_url && r.radio_url.startsWith('http'));
+                } catch (err) {
+                    console.warn('فشل تحميل الإذاعات الخارجية:', err);
+                    return [];
+                }
+            }
+
+            // ============================================================
+            // 5. دمج القوائم مع تجنب التكرار (حسب URL)
+            // ============================================================
+            function mergeRadios(base, newList, external) {
+                const urlSet = new Set();
+                const all = [];
+                const addIfNew = (item) => {
+                    if (!urlSet.has(item.radio_url)) {
+                        urlSet.add(item.radio_url);
+                        all.push(item);
+                    }
+                };
+                base.forEach(addIfNew);
+                newList.forEach(addIfNew);
+                external.forEach(addIfNew);
+                return all;
+            }
+
+            // ============================================================
+            // 6. استخراج الاسم الأساسي للتجميع الذكي
+            // ============================================================
+            function getBaseName(fullName) {
+                const clean = fullName.replace(/[\s\-–—]+(مجود|مرتل|رواية|تلاوة|ترتيل|تفسير|فتاوى|دروس|سيرة|أذكار|رقية|ترجمة).*$/i, '');
+                if (clean.includes('عبد الباسط')) return 'عبد الباسط عبد الصمد';
+                if (clean.includes('الحصري')) return 'محمود خليل الحصري';
+                if (clean.includes('المنشاوي')) return 'محمد صديق المنشاوي';
+                if (clean.includes('العفاسي')) return 'مشاري العفاسي';
+                if (clean.includes('السديس')) return 'عبد الرحمن السديس';
+                if (clean.includes('الشريم')) return 'سعود الشريم';
+                if (clean.includes('المعيقلي')) return 'ماهر المعيقلي';
+                if (clean.includes('الدوسري')) return 'ياسر الدوسري';
+                if (clean.includes('محمد أيوب')) return 'محمد أيوب';
+                if (clean.includes('مصطفى إسماعيل')) return 'مصطفى إسماعيل';
+                if (clean.includes('العجمي')) return 'أحمد بن علي العجمي';
+                if (clean.includes('بو خاطر')) return 'صلاح بو خاطر';
+                if (clean.includes('علي جابر')) return 'علي جابر';
+                if (clean.includes('القطامي')) return 'ناصر القطامي';
+                if (clean.includes('الرفاعي') && clean.includes('هاني')) return 'هاني الرفاعي';
+                if (clean.includes('الحرم المكي')) return 'إذاعة الحرم المكي';
+                if (clean.includes('القاهرة')) return 'إذاعة القرآن الكريم من القاهرة';
+                if (clean.includes('أذان نصر الدين')) return 'أذان نصر الدين طوبار';
+                return clean;
+            }
+
+            // ============================================================
+            // 7. ترتيب القراء (المشاهير أولاً ثم باقي الأسماء)
+            // ============================================================
+            const famousOrder = [
+                'عبد الباسط عبد الصمد', 'محمود خليل الحصري', 'محمد صديق المنشاوي', 'مشاري العفاسي',
+                'عبد الرحمن السديس', 'سعود الشريم', 'ماهر المعيقلي', 'ياسر الدوسري',
+                'محمد أيوب', 'مصطفى إسماعيل', 'أحمد بن علي العجمي', 'صلاح بو خاطر',
+                'علي جابر', 'ناصر القطامي', 'هاني الرفاعي', 'إذاعة الحرم المكي', 'إذاعة القرآن الكريم من القاهرة',
+                'أذان نصر الدين طوبار'
+            ];
+            function sortReaders(list) {
+                const groups = new Map();
+                list.forEach(item => {
+                    const base = getBaseName(item.name);
+                    if (!groups.has(base)) groups.set(base, []);
+                    groups.get(base).push(item);
+                });
+                const groupArray = Array.from(groups.entries());
+                groupArray.sort((a, b) => {
+                    const idxA = famousOrder.indexOf(a[0]);
+                    const idxB = famousOrder.indexOf(b[0]);
+                    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                    if (idxA !== -1) return -1;
+                    if (idxB !== -1) return 1;
+                    return a[0].localeCompare(b[0], 'ar');
+                });
+                const result = [];
+                for (const [_, items] of groupArray) {
+                    items.sort((x, y) => x.name.localeCompare(y.name, 'ar'));
+                    result.push(...items);
+                }
+                return result;
+            }
+
+            // ============================================================
+            // 8. تطبيع النص للبحث
+            // ============================================================
+            function normalizeArabic(text) {
+                return text.replace(/[إأآا]/g, 'ا').replace(/[ى]/g, 'ي').replace(/[ؤ]/g, 'و').replace(/[ئ]/g, 'ي').replace(/[ًٌٍَُِّْ]/g, '').toLowerCase();
+            }
+
+            // ============================================================
+            // 9. بدء تشغيل التطبيق
+            // ============================================================
+            (async function init() {
+                const externalRadios = await fetchExternalRadios();
+                const merged = mergeRadios(BASE_RADIOS, NEW_RADIOS_FROM_LIST, externalRadios);
+                const finalList = sortReaders(merged);
+
+                const container = document.getElementById('readers-container');
+                const readersCount = document.getElementById('readers-count');
+                const searchInput = document.getElementById('search');
+                const playBtn = document.getElementById('play-btn');
+                const playIcon = document.getElementById('play-icon');
+                const playerTitle = document.getElementById('player-title');
+                const playerSubtitle = document.getElementById('player-subtitle');
+                const errorMsgDiv = document.getElementById('error-message');
+                const themeToggle = document.getElementById('theme-toggle');
+
+                let audio = null;
+                let isPlaying = false;
+                let currentReader = null;
+                let userStopped = false;
+                let retryTimeout = null;
+
+                function initAudio() {
+                    if (!audio) {
+                        audio = new Audio();
+                        audio.setAttribute('playsinline', 'true');
+                        audio.addEventListener('ended', () => {
+                            if (currentReader && isPlaying && !userStopped) {
+                                audio.play().catch(e => console.log('ended retry', e));
+                            }
+                        });
+                        audio.addEventListener('error', () => {
+                            if (currentReader && isPlaying && !userStopped) {
+                                errorMsgDiv.textContent = 'حدث خطأ في الاتصال، جاري إعادة المحاولة...';
+                                errorMsgDiv.style.display = 'block';
+                                if (retryTimeout) clearTimeout(retryTimeout);
+                                retryTimeout = setTimeout(() => {
+                                    if (currentReader && isPlaying && !userStopped) {
+                                        audio.src = currentReader.radio_url;
+                                        audio.play().catch(() => {
+                                            errorMsgDiv.textContent = 'تعذر الاتصال، تحقق من اتصالك بالإنترنت.';
+                                        });
+                                    }
+                                }, 3000);
+                            } else {
+                                errorMsgDiv.style.display = 'none';
+                            }
+                        });
+                        audio.addEventListener('play', () => {
+                            isPlaying = true;
+                            playIcon.className = 'fas fa-pause';
+                            errorMsgDiv.style.display = 'none';
+                        });
+                        audio.addEventListener('pause', () => {
+                            isPlaying = false;
+                            playIcon.className = 'fas fa-play';
+                        });
+                    }
+                    return audio;
+                }
+
+                function escapeHtml(str) {
+                    return str.replace(/[&<>]/g, function(m) {
+                        if (m === '&') return '&amp;';
+                        if (m === '<') return '&lt;';
+                        if (m === '>') return '&gt;';
+                        return m;
+                    });
+                }
+
+                function renderReaders(list) {
+                    container.innerHTML = "";
+                    if (list.length === 0) {
+                        container.innerHTML = '<div style="text-align:center; padding:40px;">لا توجد نتائج</div>';
+                    } else {
+                        list.forEach(reader => {
+                            const card = document.createElement('div');
+                            card.className = 'reader-card';
+                            card.setAttribute('data-id', reader.id);
+                            card.innerHTML = `<div class="reader-header">
+                                <div class="reader-avatar">${escapeHtml(reader.name.charAt(0))}</div>
+                                <div class="reader-info">
+                                    <div class="reader-name">${escapeHtml(reader.name)}</div>
+                                    <div class="reader-category">${reader.category || 'قارئ'}</div>
+                                </div>
+                            </div>`;
+                            card.onclick = () => playReader(reader, card);
+                            container.appendChild(card);
+                        });
+                    }
+                    readersCount.textContent = `${list.length} قارئ`;
+                }
+
+                function playReader(reader, card) {
+                    userStopped = false;
+                    if (!audio) audio = initAudio();
+                    if (currentReader && currentReader.id === reader.id && isPlaying) {
+                        audio.pause();
+                        userStopped = true;
+                        document.querySelectorAll('.reader-card').forEach(c => c.classList.remove('active'));
+                        return;
+                    }
+                    document.querySelectorAll('.reader-card').forEach(c => c.classList.remove('active'));
+                    if (card) card.classList.add('active');
+                    currentReader = reader;
+                    playerTitle.textContent = reader.name;
+                    playerSubtitle.textContent = reader.category || 'تشغيل مباشر';
+                    errorMsgDiv.style.display = 'none';
+                    audio.src = reader.radio_url;
+                    audio.load();
+                    audio.play().then(() => {
+                        isPlaying = true;
+                        playIcon.className = 'fas fa-pause';
+                        try { localStorage.setItem('lastReader', JSON.stringify(reader)); } catch(e) {}
+                    }).catch(e => {
+                        console.error('Play failed:', e);
+                        errorMsgDiv.textContent = 'تعذر تشغيل الإذاعة. الرابط غير متاح.';
+                        errorMsgDiv.style.display = 'block';
+                        isPlaying = false;
+                        playIcon.className = 'fas fa-play';
+                        if (card) card.classList.remove('active');
+                    });
+                }
+
+                playBtn.onclick = function() {
+                    if (!currentReader || !audio) {
+                        const last = localStorage.getItem('lastReader');
+                        if (last) {
+                            try {
+                                const reader = JSON.parse(last);
+                                const cards = document.querySelectorAll('.reader-card');
+                                let foundCard = null;
+                                cards.forEach(c => {
+                                    if (c.querySelector('.reader-name').textContent === reader.name) foundCard = c;
+                                });
+                                playReader(reader, foundCard);
+                            } catch(e) {}
+                        }
+                        return;
+                    }
+                    if (isPlaying) {
+                        audio.pause();
+                        userStopped = true;
+                    } else {
+                        userStopped = false;
+                        audio.play().catch(e => {
+                            errorMsgDiv.textContent = 'تعذر التشغيل. حاول مرة أخرى.';
+                            errorMsgDiv.style.display = 'block';
+                        });
+                    }
+                };
+
+                let searchTimeout;
+                searchInput.addEventListener('input', function() {
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => {
+                        const term = normalizeArabic(this.value);
+                        const filtered = finalList.filter(r => normalizeArabic(r.name).includes(term));
+                        renderReaders(filtered);
+                    }, 300);
+                });
+
+                themeToggle.onclick = function() {
+                    document.body.classList.toggle('dark-mode');
+                    const icon = themeToggle.querySelector('i');
+                    if (document.body.classList.contains('dark-mode')) {
+                        icon.className = 'fas fa-sun';
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        icon.className = 'fas fa-moon';
+                        localStorage.setItem('theme', 'light');
+                    }
+                };
+
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    themeToggle.querySelector('i').className = 'fas fa-sun';
+                }
+
+                const lastReader = localStorage.getItem('lastReader');
+                if (lastReader) {
+                    try {
+                        const reader = JSON.parse(lastReader);
+                        playerTitle.textContent = reader.name;
+                        playerSubtitle.textContent = reader.category || 'تشغيل مباشر';
+                        currentReader = reader;
+                    } catch(e) {}
+                }
+
+                document.addEventListener('visibilitychange', function() {
+                    if (!document.hidden && currentReader && isPlaying && !userStopped && audio && audio.paused) {
+                        audio.play().catch(() => {
+                            audio.src = currentReader.radio_url;
+                            audio.play().catch(() => {
+                                isPlaying = false;
+                                playIcon.className = 'fas fa-play';
+                            });
+                        });
+                    }
+                });
+
+                renderReaders(finalList);
+            })();
+        })();
+    </script>
