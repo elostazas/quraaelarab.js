@@ -185,10 +185,6 @@
         { id: 109069, name: "***قصص الأنبياء***", radio_url: "https://backup.qurango.net/radio/alanbiya", category: "إذاعات" },
         { id: 109073, name: "رياض الصالحين", radio_url: "https://backup.qurango.net/radio/riyad", category: "إذاعات" },
         { id: 109074, name: "عبدالله البعيجان", radio_url: "https://backup.qurango.net/radio/buajan", category: "إذاعات" },
-  }
-]
-
-module.exports = { Stations }
         { id: 109075, name: "أحمد طالب بن حميد", radio_url: "https://backup.qurango.net/radio/a_binhameed", category: "إذاعات" },
         { id: 109076, name: "تفسير غريب القرآن", radio_url: "https://backup.qurango.net/radio/gareeb-quran", category: "إذاعات" },
         { id: 109077, name: "بدر التركي", radio_url: "https://backup.qurango.net/radio/bader", category: "إذاعات" },
@@ -196,7 +192,7 @@ module.exports = { Stations }
         { id: 109082, name: "إذاعة القرآن الكريم - السعودية", radio_url: "https://stream.radiojar.com/0tpy1h0kxtzuv", category: "إذاعات" },
         { id: 109083, name: "الشمائل المحمدية", radio_url: "https://backup.qurango.net/radio/shmaeel", category: "إذاعات" }
     ];
-
+module.exports = { Stations }
 
 })();
 </script>
