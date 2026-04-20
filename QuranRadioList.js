@@ -4,8 +4,6 @@
     // 1. القائمة الأساسية (BASE_RADIOS) - مدمجة من المصدرين
     // ============================================================
     const BASE_RADIOS = [
-        // القائمة الأصلية (حتى id: "127_ismail")
-        { id: "adhan_nasr", name: "أذان نصر الدين طوبار", radio_url: "/assets/aduio/adhan.mp3", category: "أذان" },
         { id: "125_cairo", name: "إذاعة القرآن الكريم من القاهرة", radio_url: "https://stream.radiojar.com/8s5u5tpdtwzuv", category: "إذاعات" },
         { id: "6_mix", name: "الإذاعة العامة - اذاعة متنوعة لمختلف القراء", radio_url: "https://qurango.net/radio/mix", category: "منوعات" },
         { id: "125_hussary", name: "محمود خليل الحصري", radio_url: "https://qurango.net/radio/mahmoud_khalil_alhussary", category: "قراء" },
@@ -17,8 +15,6 @@
         { id: "128_banna", name: "محمود علي البنا", radio_url: "https://qurango.net/radio/mahmoud_ali__albanna", category: "قراء" },
         { id: "128_banna_mojawwad", name: "محمود علي البنا مجود", radio_url: "https://qurango.net/radio/mahmoud_ali__albanna_mojawwad", category: "قراء" },
         { id: "127_ismail", name: "مصطفي إسماعيل", radio_url: "https://qurango.net/radio/mustafa_ismail", category: "قراء" },
-
-        // القائمة المضافة من كائن "radios" (تم تحويلها إلى نفس البنية)
         { id: 1, name: "إذاعة إبراهيم الأخضر", radio_url: "https://backup.qurango.net/radio/ibrahim_alakdar", category: "إذاعات" },
         { id: 2, name: "إذاعة شيخ أبو بكر الشاطري", radio_url: "https://backup.qurango.net/radio/shaik_abu_bakr_al_shatri", category: "إذاعات" },
         { id: 3, name: "إذاعة أحمد العجمي", radio_url: "https://backup.qurango.net/radio/ahmad_alajmy", category: "إذاعات" },
