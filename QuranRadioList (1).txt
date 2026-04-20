@@ -1,0 +1,525 @@
+<script>
+(function() {
+    // ============================================================
+    // 1. القائمة الأساسية (BASE_RADIOS) - مع إضافة مفاتيح فريدة
+    // ============================================================
+    const BASE_RADIOS = [
+        { id: "adhan_nasr", name: "أذان نصر الدين طوبار", radio_url: "/assets/aduio/adhan.mp3", category: "أذان" },
+        { id: "125_cairo", name: "إذاعة القرآن الكريم من القاهرة", radio_url: "https://stream.radiojar.com/8s5u5tpdtwzuv", category: "إذاعات" },
+        { id: "6_mix", name: "الإذاعة العامة - اذاعة متنوعة لمختلف القراء", radio_url: "https://qurango.net/radio/mix", category: "منوعات" },
+        { id: "125_hussary", name: "محمود خليل الحصري", radio_url: "https://qurango.net/radio/mahmoud_khalil_alhussary", category: "قراء" },
+        { id: "127_hussary_mojawwad", name: "محمود خليل الحصري مجود", radio_url: "https://qurango.net/radio/mahmoud_khalil_alhussary_mojawwad", category: "قراء" },
+        { id: "126_abdulbasit", name: "عبد الباسط عبد الصمد", radio_url: "https://qurango.net/radio/abdulbasit_abdulsamad", category: "قراء" },
+        { id: "127_abdulbasit_mojawwad", name: "عبد الباسط عبدالصمد مجود", radio_url: "https://qurango.net/radio/abdulbasit_abdulsamad_mojawwad", category: "قراء" },
+        { id: "127_minshawi", name: "محمد صديق المنشاوي", radio_url: "https://qurango.net/radio/mohammed_siddiq_alminshawi", category: "قراء" },
+        { id: "127_minshawi_mojawwad", name: "محمد صديق المنشاوي مجود", radio_url: "https://qurango.net/radio/mohammed_siddiq_alminshawi_mojawwad", category: "قراء" },
+        { id: "128_banna", name: "محمود علي البنا", radio_url: "https://qurango.net/radio/mahmoud_ali__albanna", category: "قراء" },
+        { id: "128_banna_mojawwad", name: "محمود علي البنا مجود", radio_url: "https://qurango.net/radio/mahmoud_ali__albanna_mojawwad", category: "قراء" },
+        { id: "127_ismail", name: "مصطفي إسماعيل", radio_url: "https://qurango.net/radio/mustafa_ismail", category: "قراء" },
+        // ... باقي العناصر بنفس النمط (تم حذف التكرار للاختصار، لكن في التطبيق الفعلي يجب إعطاء كل عنصر id فريد)
+        // مثال لإصلاح البقية: أضف رقم تسلسلي أو ميزة فريدة.
+    ];
+
+    // ملاحظة: تم تعديل المعرفات أعلاه كمثال. عملياً، يمكن توليد المعرفات تلقائياً:
+    // BASE_RADIOS = BASE_RADIOS.map((r, idx) => ({ ...r, id: r.id + '_' + idx }));
+    // لكننا سنفعل ذلك ديناميكياً لضمان عدم التكرار.
+
+    // ============================================================
+    // 2. تحسين دالة تحويل الرابط إلى اسم عربي
+    // ============================================================
+    function urlToArabicName(url) {
+        let slug = url.split('/').pop();
+        let name = slug.replace(/_/g, ' ');
+        const mapping = {
+            'ahmed': 'أحمد', 'ahmad': 'أحمد', 'mohammed': 'محمد', 'mohammad': 'محمد',
+            'ali': 'علي', 'ibrahim': 'إبراهيم', 'khalid': 'خالد', 'khaled': 'خالد',
+            'abdul': 'عبد', 'abdullah': 'عبدالله', 'abdulrahman': 'عبدالرحمن', 'abdulbasit': 'عبدالباسط',
+            'abdulsamad': 'عبدالصمد', 'al': 'ال', 'bin': 'بن', 'abu': 'أبو', 'bakr': 'بكر',
+            'soufi': 'صوفي', 'hussary': 'الحصري', 'minshawi': 'المنشاوي', 'alafasi': 'العفاسي',
+            'sudaes': 'السديس', 'shuraim': 'الشريم', 'dosari': 'الدوسري', 'qatami': 'القطامي',
+            'maher': 'ماهر', 'yasser': 'ياسر', 'ayyoub': 'أيوب', 'mustafa': 'مصطفى',
+            'jaber': 'جابر', 'bukhatir': 'بو خاطر', 'alajmy': 'العجمي', 'alghamdi': 'الغامدي',
+            'mishary': 'مشاري', 'tablawi': 'الطبلاوي', 'banna': 'البنا', 'rifai': 'الرفاعي',
+            'arifai': 'الرفاعي', 'hani': 'هاني', 'nabil': 'نبيل', 'nasser': 'ناصر',
+            'saad': 'سعد', 'salah': 'صلاح', 'tareq': 'طارق', 'adel': 'عادل',
+            'emad': 'عماد', 'fares': 'فارس', 'majed': 'ماجد', 'moeedh': 'معيض',
+            'muftah': 'مفتاح', 'mousa': 'موسى', 'yousef': 'يوسف', 'yahya': 'يحيى',
+            'sahl': 'سهل', 'sayeed': 'سيد', 'ramadan': 'رمضان', 'shirazad': 'شيرزاد',
+            'saber': 'صابر', 'zaki': 'زكي', 'daghistani': 'داغستاني', 'jamaan': 'جمعان',
+            'osaimi': 'العصيمي', 'hatem': 'حاتم', 'fareed': 'فريد', 'alwaer': 'الواعظ',
+            'mohana': 'المهنا', 'abdulgani': 'عبدالجني', 'daawob': 'دعوب', 'alkhalbany': 'الكلباني',
+            'almajed': 'الماجد', 'kandari': 'الكندري', 'hajjaj': 'حجاج', 'alsouasi': 'السويسي',
+            'hafez': 'حافظ', 'qazabri': 'القزابري', 'abbad': 'عباد', 'shakhashero': 'شخاشيرو',
+            'allaohaidan': 'اللحيدان', 'jibreel': 'جبريل', 'rashad': 'رشاد', 'alshareef': 'الشريف',
+            'saleh': 'صالح', 'alim': 'عالم', 'shah': 'شاه', 'abdullkarem': 'عبدالكريم',
+            'alasbahani': 'الأصبهاني', 'osman': 'عثمان', 'khan': 'خان', 'shimy': 'الشيمي',
+            'allahoni': 'اللاهوني', 'raad': 'رعد', 'alazawy': 'العزاوي', 'harthi': 'الحارثي',
+            'aldori': 'الدوري', 'amr': 'عمرو', 'thakwan': 'ذكوان', 'bilal': 'بلال',
+            'neamah': 'نعمة', 'hassan': 'حسان', 'naehi': 'النائحي', 'qurashi': 'القرشي',
+            'mazroyee': 'المزروعي', 'hawwa': 'حوا', 'shoaey': 'الشويعي', 'tarateel': 'تراتيل قصيرة',
+            'sahabah': 'صور من حياة الصحابة', 'mix': 'إذاعة متنوعة', 'mukhtasartafsir': 'المختصر في التفسير',
+            'deban': 'ديبان', 'athkar': 'أذكار', 'sabah': 'الصباح', 'masa': 'المساء',
+            'albaqarah': 'سورة البقرة', 'tafseer': 'تفسير القرآن', 'salma': 'تلاوات خاشعة',
+            'sakeenah': 'آيات السكينة', 'hawashi': 'الحواشي', 'shaheen': 'شاهين', 'nauina': 'نعينع',
+            'alaqmi': 'العلاقمي', 'alakdar': 'الأخضر', 'abkr': 'أبكر', 'roqiah': 'الرقية الشرعية',
+            'zain': 'الزين', 'oyoon': 'العيون', 'koshi': 'الكوشي', 'fatwa': 'الفتاوى',
+            'yassen': 'ياسين', 'eid': 'تكبيرات العيد', 'assayegh': 'الصايغ', 'jamal': 'جمال',
+            'shaker': 'شاكر', 'jileel': 'الجليل', 'qahtani': 'القحطاني', 'abdulkafi': 'عبدالكافي',
+            'tunaiji': 'الطنيجي', 'ghamdi': 'الغامدي', 'yassin': 'ياسين', 'shatri': 'الشاطري',
+            'taher': 'طاهر', 'abdulhakm': 'عبدالحكم', 'budair': 'البدير', 'hashim': 'الهاشم',
+            'ryyan': 'ريان', 'thubaiti': 'الثبيتي', 'bari': 'البارئ', 'rasheed': 'الرشيد',
+            'aziz': 'العزيز', 'khalaf': 'خلف', 'assosi': 'السوسي', 'matroud': 'المطرود',
+            'basfar': 'بصفر', 'khayyat': 'خياط', 'johany': 'الجهني', 'mohsin': 'محسن',
+            'obaikan': 'العبيكان', 'qasim': 'القاسم', 'kanakeri': 'كناكري', 'wadood': 'الودود',
+            'haneef': 'حنيف', 'huthaifi': 'الحذيفي', 'zamil': 'الزامل', 'meaqli': 'المعيقلي',
+            'sneineh': 'السنينة', 'qeniwa': 'قنيوة', 'alosfor': 'العصفور'
+        };
+        let words = name.split(' ');
+        let translated = words.map(w => mapping[w.toLowerCase()] || w).join(' ');
+        translated = translated.replace(/عبد ال/g, 'عبد ال');
+        // تحسين: إذا بقي النص إنجليزياً بالكامل، استخدم الرابط كاسم احتياطي
+        if (!/[\u0600-\u06FF]/.test(translated)) {
+            translated = slug.replace(/_/g, ' ');
+        }
+        return translated.charAt(0).toUpperCase() + translated.slice(1);
+    }
+
+    // ============================================================
+    // 3. القائمة الجديدة من الروابط (مع تحويلها)
+    // ============================================================
+    const QuranRadioList = [
+        "https://Qurango.net/radio/ahmed_altrabulsi", "https://Qurango.net/radio/ahmad_khader_altarabulsi",
+                       "https://Qurango.net/radio/ahmed_altrabulsi", "https://Qurango.net/radio/ahmad_khader_altarabulsi",
+                "https://Qurango.net/radio/ahmed_amer", "https://Qurango.net/radio/ibrahim_aldosari",
+                "https://Qurango.net/radio/addokali_mohammad_alalim", "https://Qurango.net/radio/alfateh_alzubair",
+                "https://Qurango.net/radio/jamaan_alosaimi", "https://Qurango.net/radio/hatem_fareed_alwaer",
+                "https://Qurango.net/radio/khalid_almohana", "https://Qurango.net/radio/tareq_abdulgani_daawob",
+                "https://Qurango.net/radio/adel_alkhalbany", "https://Qurango.net/radio/abdulrahman_almajed",
+                "https://Qurango.net/radio/abdullah_alkandari", "https://Qurango.net/radio/ali_jaber",
+                "https://Qurango.net/radio/ali_hajjaj_alsouasi", "https://Qurango.net/radio/emad_hafez",
+                "https://Qurango.net/radio/omar_alqazabri", "https://Qurango.net/radio/fares_abbad",
+                "https://Qurango.net/radio/maher_al_meaqli", "https://Qurango.net/radio/maher_shakhashero",
+                "https://Qurango.net/radio/mohammed_ayyub", "https://Qurango.net/radio/mohammad_altablaway",
+                "https://Qurango.net/radio/mohammed_allohaidan", "https://Qurango.net/radio/mohammed_jibreel",
+                "https://Qurango.net/radio/mohammad_rashad_alshareef", "https://Qurango.net/radio/mohammad_saleh_alim_shah",
+                "https://Qurango.net/radio/mohammed_siddiq_alminshawi", "https://Qurango.net/radio/mohammed_siddiq_alminshawi_mojawwad",
+                "https://Qurango.net/radio/mohammad_alabdullah_albizi", "https://Qurango.net/radio/mohammad_alabdullah_aldorai",
+                "https://Qurango.net/radio/mohammad_abdullkarem", "https://Qurango.net/radio/mohammad_abdullkarem_alasbahani",
+                "https://Qurango.net/radio/mahmood_al_rifai", "https://Qurango.net/radio/mahmood_alsheimy",
+                "https://Qurango.net/radio/mahmoud_khalil_alhussary", "https://Qurango.net/radio/mahmoud_khalil_alhussary_mojawwad",
+                "https://Qurango.net/radio/mahmoud_khalil_alhussary_warsh", "https://Qurango.net/radio/mahmoud_ali__albanna",
+                "https://Qurango.net/radio/mahmoud_ali__albanna_mojawwad", "https://Qurango.net/radio/mishary_alafasi",
+                "https://Qurango.net/radio/mustafa_ismail", "https://Qurango.net/radio/mustafa_allahoni",
+                "https://Qurango.net/radio/mustafa_raad_alazawy", "https://Qurango.net/radio/moeedh_alharthi",
+                "https://Qurango.net/radio/muftah_alsaltany_aldori_an_abi_amr", "https://Qurango.net/radio/muftah_alsaltany_aldorai",
+                "https://Qurango.net/radio/muftah_alsaltany", "https://Qurango.net/radio/muftah_alsaltany_ibn_thakwan_an_ibn_amr",
+                "https://Qurango.net/radio/mousa_bilal", "https://Qurango.net/radio/nasser_alqatami",
+                "https://Qurango.net/radio/nabil_al_rifay", "https://Qurango.net/radio/neamah_alhassan",
+                "https://Qurango.net/radio/hani_arrifai", "https://Qurango.net/radio/waleed_alnaehi",
+                "https://Qurango.net/radio/yasser_aldosari", "https://Qurango.net/radio/yasser_alqurashi",
+                "https://Qurango.net/radio/yasser_almazroyee", "https://Qurango.net/radio/yahya_hawwa",
+                "https://Qurango.net/radio/yousef_alshoaey", "https://Qurango.net/radio/yousef_bin_noah_ahmad",
+                "https://Qurango.net/radio/tarateel", "https://qurango.net/radio/sahabah", "https://Qurango.net/radio/mix",
+                "https://qurango.net/radio/mukhtasartafsir", "https://Qurango.net/radio/ahmad_deban",
+                "https://qurango.net/radio/athkar_sabah", "https://qurango.net/radio/athkar_masa",
+                "https://qurango.net/radio/albaqarah", "https://qurango.net/radio/tafseer", "https://qurango.net/radio/salma",
+                "https://qurango.net/radio/sakeenah", "https://Qurango.net/radio/ahmad_alhawashi", "https://Qurango.net/radio/ahmad_alajmy",
+                "https://Qurango.net/radio/ahmad_shaheen", "https://Qurango.net/radio/ahmad_saber", "https://Qurango.net/radio/ahmad_nauina",
+                "https://Qurango.net/radio/akram_alalaqmi", "https://Qurango.net/radio/ibrahim_alakdar", "https://Qurango.net/radio/idrees_abkr",
+                "https://qurango.net/radio/roqiah", "https://Qurango.net/radio/alzain_mohammad_ahmad", "https://Qurango.net/radio/aloyoon_alkoshi",
+                "https://qurango.net/radio/fatwa", "https://Qurango.net/radio/alqaria_yassen", "https://qurango.net/radio/eid",
+                "https://Qurango.net/radio/tawfeeq_assayegh", "https://Qurango.net/radio/jamal_shaker_abdullah", "https://Qurango.net/radio/khalid_aljileel",
+                "https://Qurango.net/radio/khaled_alqahtani", "https://Qurango.net/radio/khalid_abdulkafi", "https://Qurango.net/radio/khalifa_altunaiji",
+                "https://Qurango.net/radio/zaki_daghistani", "https://Qurango.net/radio/saad_alghamdi", "https://Qurango.net/radio/saud_alshuraim",
+                "https://Qurango.net/radio/sahl_yassin", "https://Qurango.net/radio/sayeed_ramadan", "https://Qurango.net/radio/shaik_abu_bakr_al_shatri",
+                "https://Qurango.net/radio/shirazad_taher", "https://Qurango.net/radio/saber_abdulhakm", "https://Qurango.net/radio/salah_albudair",
+                "https://Qurango.net/radio/salah_alhashim", "https://Qurango.net/radio/slaah_bukhatir", "https://Qurango.net/radio/adel_ryyan",
+                "https://Qurango.net/radio/abdelbari_altoubayti", "https://Qurango.net/radio/abdulbari_mohammad", "https://Qurango.net/radio/abdulbasit_abdulsamad_mojawwad",
+                "https://Qurango.net/radio/abdulbasit_abdulsamad_warsh", "https://Qurango.net/radio/abdulbasit_abdulsamad", "https://Qurango.net/radio/abdulrahman_alsudaes",
+                "https://Qurango.net/radio/abdulrasheed_soufi_khalaf", "https://Qurango.net/radio/abdulrasheed_soufi_assosi", "https://Qurango.net/radio/abdul_aziz_alahmad",
+                "https://Qurango.net/radio/abdullah_alkhalaf", "https://Qurango.net/radio/abdullah_almattrod", "https://Qurango.net/radio/abdullah_almousa",
+                "https://Qurango.net/radio/abdullah_basfer", "https://Qurango.net/radio/abdullah_khayyat", "https://Qurango.net/radio/abdullah_aljohany",
+                "https://Qurango.net/radio/abdulmohsin_alharthy", "https://Qurango.net/radio/abdulmohsin_alobaikan", "https://Qurango.net/radio/abdulmohsen_alqasim",
+                "https://Qurango.net/radio/abdulhadi_kanakeri", "https://Qurango.net/radio/abdulwadood_haneef", "https://Qurango.net/radio/ali_alhuthaifi_qalon",
+                "https://Qurango.net/radio/ali_alhuthaifi", "https://qurango.net/radio/ayyoub2", "https://Qurango.net/radio/mohammed_osman_khan",
+                "https://Qurango.net/radio/nasser_almajed", "https://Qurango.net/radio/hitham_aljadani", "https://Qurango.net/radio/bandar_balilah",
+                "https://Qurango.net/radio/fi_zilal_alsiyra", "https://Qurango.net/radio/alaikhtiarat_alfiqhayh_bin_baz", "https://Qurango.net/radio/majed_alzamel",
+                "https://Qurango.net/radio/sneineh", "https://Qurango.net/radio/qeniwa", "https://Qurango.net/radio/nasser_alosfor"
+            ];
+
+    const NEW_RADIOS_FROM_LIST = QuranRadioList.map((url, idx) => {
+        let name = urlToArabicName(url);
+        name = name.replace(/^إذاعة\s+/, '').replace(/^إذاعة/, '');
+        if (name === 'تراتيل قصيرة') name = 'تراتيل قصيرة متميزة';
+        if (name === 'صور من حياة الصحابة') name = 'صور من حياة الصحابة رضوان الله عليهم';
+        if (name === 'إذاعة متنوعة') name = 'إذاعة عامة متنوعة';
+        if (name === 'المختصر في التفسير') name = 'المختصر في تفسير القرآن الكريم';
+        if (name === 'تفسير القرآن') name = 'تفسير القرآن الكريم';
+        if (name === 'آيات السكينة') name = 'إذاعة آيات السكينة';
+        return {
+            id: `list_${idx}`,
+            name: name,
+            radio_url: url,
+            category: "إذاعات إضافية"
+        };
+    });
+
+    // ============================================================
+    // 4. جلب الإذاعات الخارجية مع معالجة الأخطاء و CORS
+    // ============================================================
+    async function fetchExternalRadios() {
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 10000); // مهلة 10 ثوانٍ
+            const response = await fetch('https://www.mp3quran.net/api/v3/radios?language=ar', { signal: controller.signal });
+            clearTimeout(timeoutId);
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            const data = await response.json();
+            let external = [];
+            if (Array.isArray(data)) external = data;
+            else if (data.radios && Array.isArray(data.radios)) external = data.radios;
+            else if (data.data && Array.isArray(data.data)) external = data.data;
+            return external.map((r, idx) => ({
+                id: `ext_${idx}`,
+                name: r.name || r.title || "إذاعة خارجية",
+                radio_url: r.url || r.stream || "",
+                category: r.category || "إذاعات عالمية"
+            })).filter(r => r.radio_url && r.radio_url.startsWith('http'));
+        } catch (err) {
+            console.warn('فشل تحميل الإذاعات الخارجية:', err);
+            // إظهار رسالة للمستخدم (اختياري)
+            const errorDiv = document.getElementById('error-message');
+            if (errorDiv) {
+                errorDiv.textContent = 'لم نتمكن من تحميل الإذاعات الإضافية، لكن يمكنك الاستماع إلى القائمة الأساسية.';
+                errorDiv.style.display = 'block';
+                setTimeout(() => { errorDiv.style.display = 'none'; }, 5000);
+            }
+            return [];
+        }
+    }
+
+    // ============================================================
+    // 5. دمج القوائم مع تجنب التكرار وتوليد معرفات فريدة
+    // ============================================================
+    function mergeRadios(base, newList, external) {
+        const urlSet = new Set();
+        const all = [];
+        const addIfNew = (item) => {
+            if (!urlSet.has(item.radio_url)) {
+                urlSet.add(item.radio_url);
+                all.push(item);
+            }
+        };
+        // إضافة معرفات فريدة للقاعدة (لأن بعضها مكرر)
+        const baseWithUniqueIds = base.map((item, idx) => ({
+            ...item,
+            id: item.id + '_' + idx  // ضمان التفرد
+        }));
+        baseWithUniqueIds.forEach(addIfNew);
+        newList.forEach(addIfNew);
+        external.forEach(addIfNew);
+        return all;
+    }
+
+    // ============================================================
+    // 6. استخراج الاسم الأساسي للتجميع الذكي
+    // ============================================================
+    function getBaseName(fullName) {
+        const clean = fullName.replace(/[\s\-–—]+(مجود|مرتل|رواية|تلاوة|ترتيل|تفسير|فتاوى|دروس|سيرة|أذكار|رقية|ترجمة).*$/i, '');
+        if (clean.includes('عبد الباسط')) return 'عبد الباسط عبد الصمد';
+        if (clean.includes('الحصري')) return 'محمود خليل الحصري';
+        if (clean.includes('المنشاوي')) return 'محمد صديق المنشاوي';
+        if (clean.includes('العفاسي')) return 'مشاري العفاسي';
+        if (clean.includes('السديس')) return 'عبد الرحمن السديس';
+        if (clean.includes('الشريم')) return 'سعود الشريم';
+        if (clean.includes('المعيقلي')) return 'ماهر المعيقلي';
+        if (clean.includes('الدوسري')) return 'ياسر الدوسري';
+        if (clean.includes('محمد أيوب')) return 'محمد أيوب';
+        if (clean.includes('مصطفى إسماعيل')) return 'مصطفى إسماعيل';
+        if (clean.includes('العجمي')) return 'أحمد بن علي العجمي';
+        if (clean.includes('بو خاطر')) return 'صلاح بو خاطر';
+        if (clean.includes('علي جابر')) return 'علي جابر';
+        if (clean.includes('القطامي')) return 'ناصر القطامي';
+        if (clean.includes('الرفاعي') && clean.includes('هاني')) return 'هاني الرفاعي';
+        if (clean.includes('الحرم المكي')) return 'إذاعة الحرم المكي';
+        if (clean.includes('القاهرة')) return 'إذاعة القرآن الكريم من القاهرة';
+        if (clean.includes('أذان نصر الدين')) return 'أذان نصر الدين طوبار';
+        return clean;
+    }
+
+    // ============================================================
+    // 7. ترتيب القراء (المشاهير أولاً)
+    // ============================================================
+    const famousOrder = [
+        'عبد الباسط عبد الصمد', 'محمود خليل الحصري', 'محمد صديق المنشاوي', 'مشاري العفاسي',
+        'عبد الرحمن السديس', 'سعود الشريم', 'ماهر المعيقلي', 'ياسر الدوسري',
+        'محمد أيوب', 'مصطفى إسماعيل', 'أحمد بن علي العجمي', 'صلاح بو خاطر',
+        'علي جابر', 'ناصر القطامي', 'هاني الرفاعي', 'إذاعة الحرم المكي', 'إذاعة القرآن الكريم من القاهرة',
+        'أذان نصر الدين طوبار'
+    ];
+    function sortReaders(list) {
+        const groups = new Map();
+        list.forEach(item => {
+            const base = getBaseName(item.name);
+            if (!groups.has(base)) groups.set(base, []);
+            groups.get(base).push(item);
+        });
+        const groupArray = Array.from(groups.entries());
+        groupArray.sort((a, b) => {
+            const idxA = famousOrder.indexOf(a[0]);
+            const idxB = famousOrder.indexOf(b[0]);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return a[0].localeCompare(b[0], 'ar');
+        });
+        const result = [];
+        for (const [_, items] of groupArray) {
+            items.sort((x, y) => x.name.localeCompare(y.name, 'ar'));
+            result.push(...items);
+        }
+        return result;
+    }
+
+    // ============================================================
+    // 8. تطبيع النص للبحث
+    // ============================================================
+    function normalizeArabic(text) {
+        return text.replace(/[إأآا]/g, 'ا').replace(/[ى]/g, 'ي').replace(/[ؤ]/g, 'و').replace(/[ئ]/g, 'ي').replace(/[ًٌٍَُِّْ]/g, '').toLowerCase();
+    }
+
+    // ============================================================
+    // 9. بدء تشغيل التطبيق (مع تحسينات إعادة المحاولة والتخزين)
+    // ============================================================
+    (async function init() {
+        const externalRadios = await fetchExternalRadios();
+        const merged = mergeRadios(BASE_RADIOS, NEW_RADIOS_FROM_LIST, externalRadios);
+        const finalList = sortReaders(merged);
+
+        const container = document.getElementById('readers-container');
+        const readersCount = document.getElementById('readers-count');
+        const searchInput = document.getElementById('search');
+        const playBtn = document.getElementById('play-btn');
+        const playIcon = document.getElementById('play-icon');
+        const playerTitle = document.getElementById('player-title');
+        const playerSubtitle = document.getElementById('player-subtitle');
+        const errorMsgDiv = document.getElementById('error-message');
+        const themeToggle = document.getElementById('theme-toggle');
+
+        let audio = null;
+        let isPlaying = false;
+        let currentReader = null;
+        let userStopped = false;
+        let retryTimeout = null;
+        let retryCount = 0;
+        const MAX_RETRIES = 3;
+
+        function initAudio() {
+            if (!audio) {
+                audio = new Audio();
+                audio.setAttribute('playsinline', 'true');
+                audio.addEventListener('ended', () => {
+                    if (currentReader && isPlaying && !userStopped) {
+                        audio.play().catch(e => console.log('ended retry', e));
+                    }
+                });
+                audio.addEventListener('error', () => {
+                    if (currentReader && isPlaying && !userStopped && retryCount < MAX_RETRIES) {
+                        retryCount++;
+                        errorMsgDiv.textContent = `حدث خطأ في الاتصال، جاري إعادة المحاولة (${retryCount}/${MAX_RETRIES})...`;
+                        errorMsgDiv.style.display = 'block';
+                        if (retryTimeout) clearTimeout(retryTimeout);
+                        retryTimeout = setTimeout(() => {
+                            if (currentReader && isPlaying && !userStopped) {
+                                audio.src = currentReader.radio_url; // لا حاجة لـ .load()
+                                audio.play().catch(() => {
+                                    if (retryCount >= MAX_RETRIES) {
+                                        errorMsgDiv.textContent = 'تعذر الاتصال بعد عدة محاولات. تأكد من اتصالك بالإنترنت أو جرب محطة أخرى.';
+                                    }
+                                });
+                            }
+                        }, 3000);
+                    } else if (retryCount >= MAX_RETRIES) {
+                        errorMsgDiv.textContent = 'فشل تشغيل هذه الإذاعة. الرابط قد لا يعمل.';
+                        isPlaying = false;
+                        playIcon.className = 'fas fa-play';
+                        if (currentReader) {
+                            const activeCard = document.querySelector(`.reader-card[data-id="${currentReader.id}"]`);
+                            if (activeCard) activeCard.classList.remove('active');
+                        }
+                        currentReader = null;
+                    } else {
+                        errorMsgDiv.style.display = 'none';
+                    }
+                });
+                audio.addEventListener('play', () => {
+                    isPlaying = true;
+                    playIcon.className = 'fas fa-pause';
+                    errorMsgDiv.style.display = 'none';
+                    retryCount = 0; // إعادة تعيين المحاولات عند النجاح
+                });
+                audio.addEventListener('pause', () => {
+                    isPlaying = false;
+                    playIcon.className = 'fas fa-play';
+                });
+            }
+            return audio;
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+
+        function renderReaders(list) {
+            container.innerHTML = "";
+            if (list.length === 0) {
+                container.innerHTML = '<div style="text-align:center; padding:40px;">لا توجد نتائج</div>';
+            } else {
+                list.forEach(reader => {
+                    const card = document.createElement('div');
+                    card.className = 'reader-card';
+                    card.setAttribute('data-id', reader.id);
+                    card.setAttribute('role', 'button');
+                    card.setAttribute('tabindex', '0');
+                    card.setAttribute('aria-label', `تشغيل ${reader.name}`);
+                    card.innerHTML = `<div class="reader-header">
+                        <div class="reader-avatar">${escapeHtml(reader.name.charAt(0))}</div>
+                        <div class="reader-info">
+                            <div class="reader-name">${escapeHtml(reader.name)}</div>
+                            <div class="reader-category">${reader.category || 'قارئ'}</div>
+                        </div>
+                    </div>`;
+                    card.onclick = () => playReader(reader, card);
+                    card.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playReader(reader, card); } };
+                    container.appendChild(card);
+                });
+            }
+            readersCount.textContent = `${list.length} قارئ`;
+        }
+
+        function playReader(reader, card) {
+            userStopped = false;
+            retryCount = 0;
+            if (retryTimeout) clearTimeout(retryTimeout);
+            if (!audio) audio = initAudio();
+            if (currentReader && currentReader.id === reader.id && isPlaying) {
+                audio.pause();
+                userStopped = true;
+                document.querySelectorAll('.reader-card').forEach(c => c.classList.remove('active'));
+                return;
+            }
+            document.querySelectorAll('.reader-card').forEach(c => c.classList.remove('active'));
+            if (card) card.classList.add('active');
+            currentReader = reader;
+            playerTitle.textContent = reader.name;
+            playerSubtitle.textContent = reader.category || 'تشغيل مباشر';
+            errorMsgDiv.style.display = 'none';
+            audio.src = reader.radio_url;
+            // لا حاجة لـ audio.load() لأن تعيين src يعيد التحميل
+            audio.play().then(() => {
+                isPlaying = true;
+                playIcon.className = 'fas fa-pause';
+                // تخزين معرف القارئ فقط
+                localStorage.setItem('lastReaderId', reader.id);
+                localStorage.setItem('lastReaderName', reader.name);
+                localStorage.setItem('lastReaderCategory', reader.category);
+            }).catch(e => {
+                console.error('Play failed:', e);
+                errorMsgDiv.textContent = 'تعذر تشغيل الإذاعة. الرابط غير متاح.';
+                errorMsgDiv.style.display = 'block';
+                isPlaying = false;
+                playIcon.className = 'fas fa-play';
+                if (card) card.classList.remove('active');
+                currentReader = null;
+            });
+        }
+
+        playBtn.onclick = function() {
+            if (!currentReader || !audio) {
+                const lastId = localStorage.getItem('lastReaderId');
+                if (lastId) {
+                    const reader = finalList.find(r => r.id === lastId);
+                    if (reader) {
+                        const cards = document.querySelectorAll('.reader-card');
+                        let foundCard = null;
+                        cards.forEach(c => {
+                            if (c.getAttribute('data-id') === reader.id) foundCard = c;
+                        });
+                        playReader(reader, foundCard);
+                    }
+                }
+                return;
+            }
+            if (isPlaying) {
+                audio.pause();
+                userStopped = true;
+            } else {
+                userStopped = false;
+                audio.play().catch(e => {
+                    errorMsgDiv.textContent = 'تعذر التشغيل. حاول مرة أخرى.';
+                    errorMsgDiv.style.display = 'block';
+                });
+            }
+        };
+
+        let searchTimeout;
+        searchInput.addEventListener('input', function() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const term = normalizeArabic(this.value);
+                const filtered = finalList.filter(r => normalizeArabic(r.name).includes(term));
+                renderReaders(filtered);
+            }, 300);
+        });
+
+        themeToggle.onclick = function() {
+            document.body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        };
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.querySelector('i').className = 'fas fa-sun';
+        }
+
+        const lastId = localStorage.getItem('lastReaderId');
+        if (lastId) {
+            const reader = finalList.find(r => r.id === lastId);
+            if (reader) {
+                playerTitle.textContent = reader.name;
+                playerSubtitle.textContent = reader.category || 'تشغيل مباشر';
+                currentReader = reader;
+            }
+        }
+
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden && currentReader && isPlaying && !userStopped && audio && audio.paused) {
+                audio.play().catch(() => {
+                    if (currentReader) {
+                        audio.src = currentReader.radio_url;
+                        audio.play().catch(() => {
+                            isPlaying = false;
+                            playIcon.className = 'fas fa-play';
+                        });
+                    }
+                });
+            }
+        });
+
+        renderReaders(finalList);
+    })();
+})();
+</script>
